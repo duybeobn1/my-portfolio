@@ -3,6 +3,14 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 
 const skillsIcons = [
   {
+    img: "https://skillicons.dev/icons?i=c,cpp",
+    id: 5
+  },
+  {
+    img: "https://skillicons.dev/icons?i=java,py",
+    id: 5
+  },
+  {
     img: "https://skillicons.dev/icons?i=html,css",
     id: 1,
   },
@@ -18,6 +26,11 @@ const skillsIcons = [
     img: "https://skillicons.dev/icons?i=tailwind,scss",
     id: 4,
   },
+  {
+    img:"https://skillicons.dev/icons?i=git,r",
+    id: 6
+  }
+
 ];
 
 function Hero() {
