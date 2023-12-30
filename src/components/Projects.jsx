@@ -137,9 +137,9 @@ function Projects() {
               />
             </div>
           </div>
-          <div>
+          {/* <div>
           {<h2 className="new-projects">New projects coming soon.. 🤠</h2>}
-          </div>
+          </div> */}
         </div>
       </section>
     </>
