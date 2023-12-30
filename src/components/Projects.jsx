@@ -126,7 +126,7 @@ function Projects() {
                 title="CryptoX"
                 date="(August 2023)"
                 img={Coin}
-                description="A website that allows users to search for information about various cryptocurrencies in real-time. The website is designed to provide users with accurate and up-to-date information about the price, market cap, trading volume, and other key metrics of cryptocurrencies."
+                description="A website that allows users to search for information about various cryptocurrencies in real-time. "
                 techno1="React"
                 techno2="SCSS"
                 code="https://github.com/duybeobn1/cryptoX"
