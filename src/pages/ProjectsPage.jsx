@@ -1,3 +1,5 @@
+import { desc } from "framer-motion/client";
+
 function ProjectsPage() {
   const projects = [
     {
@@ -7,7 +9,7 @@ function ProjectsPage() {
         "A modern, responsive portfolio website built with React and Tailwind CSS featuring smooth animations and interactive elements.",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       image: "/api/placeholder/400/250",
-      github: "#",
+      github: "https://github.com/duybeobn1/my-portfolio",
       live: "#",
     },
     {
@@ -86,10 +88,7 @@ function ProjectsPage() {
       title: "Chicken Invaders Clone (March 2022)",
       description:
         "A classic 2D space shooter game inspired by Chicken Invaders. Built from scratch in Java using the Java Swing library, the game features waves of enemies, projectile mechanics, collision detection, and score tracking. Designed for educational purposes and to reinforce object-oriented programming concepts.",
-      technologies: [
-        "C/C++",
-        "SDL/SDL2"
-      ],
+      technologies: ["C/C++", "SDL/SDL2"],
       github: "https://github.com/duybeobn1/Chicken-Invaders",
       live: "#",
     },
@@ -113,12 +112,7 @@ function ProjectsPage() {
       title: "Gymnate (March 2023)",
       description:
         "A responsive and modern fitness web app that helps users discover workout programs and gyms. Designed with a focus on clean UI/UX and mobile accessibility, it offers category-based filtering, animated transitions, and an engaging landing page to promote healthy lifestyles.",
-      technologies: [
-        "React.js",
-        "Tailwind CSS",
-        "RapidAPI",
-        "Framer Motion",
-      ],
+      technologies: ["React.js", "Tailwind CSS", "RapidAPI", "Framer Motion"],
       github: "https://github.com/duybeobn1/gymnate",
       live: "https://gymnate.vercel.app/",
     },
@@ -127,14 +121,107 @@ function ProjectsPage() {
       title: "CryptoX - Crypto Tracker (May 2023)",
       description:
         "A modern and responsive web application that tracks real-time cryptocurrency prices and market statistics. Users can view detailed charts, search for specific coins, and access key metrics such as price, market cap, and 24h changes. Designed to be fast, mobile-friendly, and visually appealing.",
-      technologies: [
-        "React.js",
-        "CoinGecko API",
-        "Chart.js",
-        "Tailwind CSS",
-      ],
+      technologies: ["React.js", "CoinGecko API", "Chart.js", "Tailwind CSS"],
       github: "https://github.com/duybeobn1/cryptoX",
       live: "https://crypto-x-five.vercel.app/",
+    },
+    {
+      id: 12,
+      title: "Procedural Animation & Terrain Generation in Unity (March 2024)",
+      description:
+        "An advanced Unity project showcasing procedural animation and map generation techniques to create immersive and dynamic game environments. The project includes humanoid and non-human creature animations, reactive rigging systems, and terrain generation logic that produces a unique game map every session. It also integrates advanced gameplay mechanics like boss behavior and procedural weapon animation for enriched interactivity.",
+      technologies: [
+        "Unity (2022.3 LTS)",
+        "C#",
+        "Mixamo",
+        "Procedural Map Generation",
+        "Rigging / Animation Controller",
+        "Polygon Assets (Low Poly)",
+      ],
+      github: "https://github.com/duybeobn1/UnityProject",
+      live: "#",
+    },
+    {
+      id: 13,
+      title: "Stage Airmium - Air Treatment System (April - August 2024)",
+      description:
+        "Analyzed data workflows and user requirements, Designed and implemented a secure, scalable system for data historization and quality control, Developed web interfaces for accessing and visualizing real-time air treatment data, Proposed solutions for backup strategies and mobile/web accessibility",
+      technologies: [
+        "Angular",
+        "Tailwind CSS",
+        "Spring Boot",
+        "PostgreSQL",
+        "FastAPI",
+        "Python",
+        "OCR",
+        "Docker",
+        "REST APIS",
+        "Git",
+        "Data historization",
+        "access control",
+        "authentication",
+      ],
+      image: "/api/placeholder/400/250",
+      github: "#",
+      live: "#",
+    },
+    {
+      id: 14,
+      title: "Edge Detection and Gradient Analysis in C++ with Qt and OpenCV (2024)",
+      description:
+        "This project implements advanced edge detection techniques using differential operators (Prewitt, Sobel, Kirsch) combined with thresholding and refinement processes to highlight contours in images. ",
+      technologies: [
+        "C++",
+        "Qt",
+        "OpenCV",
+        "Image Processing",
+        "Edge Detection",
+        "Gradient Analysis",
+      ],
+      image: "/api/placeholder/400/250",
+      github: "https://github.com/duybeobn1/ImageEdgeDetection",
+      live: "#",
+    },
+    {
+      id: 15,
+      title: "Mini Vision Transformer for restoring images (2025)",
+      description: "This project explores the capabilities of Vision Transformers (ViTs) by segmenting images into fixed-size patches and attempting to reconstruct the original image using attention-based mechanisms. By experimenting with small patch permutations (e.g., 4×4), the model evaluates whether global context can be preserved and restored from shuffled or occluded image segments. The goal is to investigate the effectiveness of transformer attention in recovering image structure, paving the way for applications in image inpainting, resizing, or restoration.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Vision Transformers",
+        "Image Processing",
+        "Machine Learning",
+        "Mathplotlib",
+        "NumPy",
+        "Torchvision",
+      ],
+      image: "/api/placeholder/400/250",
+      github: "https://github.com/duybeobn1/Mini-Vision-Transformer",
+      live: "#",
+    },
+    {
+      id: 16,
+      title: "Smart Cooking Assistant – Recipe & Ingredient Tracker (In Progress)",
+      description: "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Express",
+        "OCR",
+        "Tailwind CSS",
+        "CI/CD",
+        "Docker",
+        "Git",
+        "REST APIs",
+        "Authentication",
+        "PostgreSQL",
+        "Spring Boot",
+
+      ],
+      image: "/api/placeholder/400/250",
+      github: "https://github.com/duybeobn1/cook_backend ",
+      live: "#",
     },
   ];
 
