@@ -10,7 +10,7 @@ function ProjectsPage() {
       technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
       image: "/api/placeholder/400/250",
       github: "https://github.com/duybeobn1/my-portfolio",
-      live: "#",
+      live: "https://my-portfolio-omega-red.vercel.app/",
     },
     {
       id: 2,
@@ -19,18 +19,8 @@ function ProjectsPage() {
         "Full-stack e-commerce solution with user authentication, payment processing, and admin dashboard.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       image: "/api/placeholder/400/250",
-      github: "#",
-      live: "#",
-    },
-    {
-      id: 3,
-      title: "Task Management App",
-      description:
-        "Collaborative task management application with real-time updates and team collaboration features.",
-      technologies: ["React", "Socket.io", "Express", "PostgreSQL"],
-      image: "/api/placeholder/400/250",
-      github: "#",
-      live: "#",
+      github: "https://github.com/duybeobn1/e-commerce",
+      live: "https://e-commerce-nine-murex.vercel.app/",
     },
     {
       id: 4,
@@ -167,7 +157,8 @@ function ProjectsPage() {
     },
     {
       id: 14,
-      title: "Edge Detection and Gradient Analysis in C++ with Qt and OpenCV (2024)",
+      title:
+        "Edge Detection and Gradient Analysis in C++ with Qt and OpenCV (2024)",
       description:
         "This project implements advanced edge detection techniques using differential operators (Prewitt, Sobel, Kirsch) combined with thresholding and refinement processes to highlight contours in images. ",
       technologies: [
@@ -185,7 +176,8 @@ function ProjectsPage() {
     {
       id: 15,
       title: "Mini Vision Transformer for restoring images (2025)",
-      description: "This project explores the capabilities of Vision Transformers (ViTs) by segmenting images into fixed-size patches and attempting to reconstruct the original image using attention-based mechanisms. By experimenting with small patch permutations (e.g., 4×4), the model evaluates whether global context can be preserved and restored from shuffled or occluded image segments. The goal is to investigate the effectiveness of transformer attention in recovering image structure, paving the way for applications in image inpainting, resizing, or restoration.",
+      description:
+        "This project explores the capabilities of Vision Transformers (ViTs) by segmenting images into fixed-size patches and attempting to reconstruct the original image using attention-based mechanisms. By experimenting with small patch permutations (e.g., 4×4), the model evaluates whether global context can be preserved and restored from shuffled or occluded image segments. The goal is to investigate the effectiveness of transformer attention in recovering image structure, paving the way for applications in image inpainting, resizing, or restoration.",
       technologies: [
         "Python",
         "PyTorch",
@@ -202,8 +194,10 @@ function ProjectsPage() {
     },
     {
       id: 16,
-      title: "Smart Cooking Assistant – Recipe & Ingredient Tracker (In Progress)",
-      description: "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly.",
+      title:
+        "Smart Cooking Assistant – Recipe & Ingredient Tracker (In Progress)",
+      description:
+        "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly.",
       technologies: [
         "React.js",
         "Node.js",
@@ -217,7 +211,6 @@ function ProjectsPage() {
         "Authentication",
         "PostgreSQL",
         "Spring Boot",
-
       ],
       image: "/api/placeholder/400/250",
       github: "https://github.com/duybeobn1/cook_backend ",
@@ -278,12 +271,23 @@ function ProjectsPage() {
                   >
                     GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-2 px-4 rounded-md hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
-                  >
-                    Live Demo
-                  </a>
+                  {project.live === "#" ? (
+                    <span
+                      className="flex-1 bg-gray-300 text-gray-600 text-center py-2 px-4 rounded-md cursor-not-allowed shadow-inner"
+                      title="Live demo not available"
+                    >
+                      Unavailable
+                    </span>
+                  ) : (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-2 px-4 rounded-md hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
