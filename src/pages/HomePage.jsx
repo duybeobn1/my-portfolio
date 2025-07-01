@@ -106,6 +106,9 @@ const HomePage = () => {
             <p>
               <strong>Google Data Analytics</strong> — In Progress
             </p>
+            <p>
+              <strong>IBM AI Engineering Professional Certificate</strong> — In Progress
+            </p>
           </div>
         </div>
       </section>
