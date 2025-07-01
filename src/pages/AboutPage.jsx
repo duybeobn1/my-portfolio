@@ -70,18 +70,6 @@ function AboutPage() {
           </div>
           
         </div>
-<div className="mt-20 text-center px-4">
-  <h3 className="text-4xl font-bold text-purple-700 mb-10">Certifications</h3>
-  <div className="text-lg text-gray-800 space-y-6 max-w-3xl mx-auto leading-relaxed">
-    <p><strong>Microsoft Azure AI Fundamentals</strong> (2025): Generative AI, NLP, Computer Vision, Document Intelligence, AI Overview</p>
-    <p><strong>Google Cloud & Generative AI</strong> (2023): LLMs, Vertex AI, Image Captioning, Attention, Responsible AI</p>
-    <p><strong>Meta Front-End Developer Specialization</strong>: Advanced React, UX/UI, JS, Capstone</p>
-    <p><strong>Google IT Support Specialization</strong>: Troubleshooting, Git/GitHub, OS, Networking, Security</p>
-    <p><strong>IBM Machine Learning with Python</strong></p>
-    <p><strong>The Science of Gastronomy</strong> – The Hong Kong University of Science and Technology (Grade: 98%)</p>
-    <p><strong>Google Data Analytics</strong> – In Progress</p>
-  </div>
-</div>
 
       </div>
     </div>

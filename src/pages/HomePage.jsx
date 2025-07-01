@@ -16,7 +16,7 @@ const HomePage = () => {
             <span className="text-white text-2xl font-bold">AV</span>
           </div>
         </motion.div>
-        
+
         <motion.h1
           className="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 bg-clip-text text-transparent mb-6"
           initial={{ opacity: 0, y: 60 }}
@@ -25,25 +25,28 @@ const HomePage = () => {
         >
           Anh Vu
         </motion.h1>
-        
+
         <motion.h2
           className="text-xl sm:text-2xl lg:text-3xl font-light text-gray-600 mt-4 max-w-4xl leading-relaxed"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          Master’s Student in Artificial Intelligent (M2), Full-Stack Developer & AI Enthusiast
+          Master’s Student in Artificial Intelligent (M2), Full-Stack Developer
+          & AI Enthusiast
         </motion.h2>
-        
+
         <motion.p
           className="text-lg sm:text-xl text-gray-500 mt-6 max-w-3xl leading-relaxed font-normal"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          Passionate about leveraging machine learning, computer vision, and web technologies to craft practical, scalable solutions with real-world impact.
+          Passionate about leveraging machine learning, computer vision, and web
+          technologies to craft practical, scalable solutions with real-world
+          impact.
         </motion.p>
-        
+
         <motion.div
           className="mt-12 flex gap-6 flex-wrap justify-center"
           initial={{ opacity: 0, y: 20 }}
@@ -64,6 +67,48 @@ const HomePage = () => {
           </Link>
         </motion.div>
       </section>
+      <section className="py-24 px-6 bg-gradient-to-br from-white to-indigo-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h3
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Certifications
+          </motion.h3>
+
+          <div className="text-lg text-gray-800 space-y-6 leading-relaxed">
+            <p>
+              <strong>Microsoft Azure AI Fundamentals</strong> (2025):
+              Generative AI, NLP, Computer Vision, Document Intelligence, AI
+              Overview
+            </p>
+            <p>
+              <strong>Google Cloud & Generative AI</strong> (2023): LLMs, Vertex
+              AI, Image Captioning, Attention, Responsible AI
+            </p>
+            <p>
+              <strong>Meta Front-End Developer Specialization</strong>: Advanced
+              React, UX/UI, JS, Capstone
+            </p>
+            <p>
+              <strong>Google IT Support Specialization</strong>:
+              Troubleshooting, Git/GitHub, OS, Networking, Security
+            </p>
+            <p>
+              <strong>IBM Machine Learning with Python</strong>
+            </p>
+            <p>
+              <strong>The Science of Gastronomy</strong> — The Hong Kong
+              University of Science and Technology (Grade: 92%)
+            </p>
+            <p>
+              <strong>Google Data Analytics</strong> — In Progress
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Projects */}
       <section className="py-24 px-6 bg-gradient-to-r from-indigo-50 to-purple-50">
@@ -81,23 +126,27 @@ const HomePage = () => {
             {[
               {
                 title: "AI Vision Transformer",
-                description: "Advanced image restoration using Vision Transformers and deep learning",
-                tech: ["Python", "PyTorch", "Computer Vision"]
+                description:
+                  "Advanced image restoration using Vision Transformers and deep learning",
+                tech: ["Python", "PyTorch", "Computer Vision"],
               },
               {
                 title: "CO₂ Impact Tracker",
-                description: "Full-stack application for carbon footprint comparison and analysis",
-                tech: ["React", "Spring Boot", "PostgreSQL"]
+                description:
+                  "Full-stack application for carbon footprint comparison and analysis",
+                tech: ["React", "Spring Boot", "PostgreSQL"],
               },
               {
                 title: "Crypto Trading Bot",
-                description: "Intelligent trading system with technical analysis strategies",
-                tech: ["Python", "Machine Learning", "APIs"]
+                description:
+                  "Intelligent trading system with technical analysis strategies",
+                tech: ["Python", "Machine Learning", "APIs"],
               },
               {
                 title: "Smart Culinary Assistant",
-                description: "AI-powered cooking helper with OCR and object detection",
-                tech: ["React", "YOLO", "OCR"]
+                description:
+                  "AI-powered cooking helper with OCR and object detection",
+                tech: ["React", "YOLO", "OCR"],
               },
             ].map((project, i) => (
               <motion.div
@@ -107,11 +156,18 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h4>
-                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  {project.title}
+                </h4>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm rounded-full border border-indigo-200">
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm rounded-full border border-indigo-200"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -119,7 +175,7 @@ const HomePage = () => {
               </motion.div>
             ))}
           </div>
-          
+
           <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -131,8 +187,18 @@ const HomePage = () => {
               className="inline-flex items-center px-6 py-3 text-indigo-600 font-medium border-2 border-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300"
             >
               View All Projects
-              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </Link>
           </motion.div>
@@ -148,9 +214,11 @@ const HomePage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
           >
-            "I believe in the power of technology to transform ideas into reality, 
+            "I believe in the power of technology to transform ideas into
+            reality,
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-semibold">
-              {" "}creating solutions that make a difference.
+              {" "}
+              creating solutions that make a difference.
             </span>
             "
           </motion.p>
@@ -176,16 +244,17 @@ const HomePage = () => {
           >
             Let's Build Something Amazing Together
           </motion.h3>
-          
+
           <motion.p
             className="text-lg sm:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Ready to discuss your next project? I'm always excited to collaborate on innovative solutions.
+            Ready to discuss your next project? I'm always excited to
+            collaborate on innovative solutions.
           </motion.p>
-          
+
           <motion.div
             className="flex gap-6 justify-center flex-wrap"
             initial={{ opacity: 0, y: 20 }}
