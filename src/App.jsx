@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import LoadingPage from "./pages/LoadingPage";
 import InkTrailCursor from "./components/Trail";
+import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import NavBar from "./pages/NavBar";
 import Footer from "./components/Footer";
@@ -12,7 +13,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import ContactPage from "./pages/ContactPage";
 import "./App.css";
-
 function App() {
   const [loadingFinished, setLoadingFinished] = useState(false);
   const location = useLocation();
@@ -39,6 +39,7 @@ function App() {
 
   return (
     <div className="App bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen">
+      <ScrollToTop />
       <InkTrailCursor />
       {showNavBar && <NavBar />}
       <AnimatePresence mode="wait">

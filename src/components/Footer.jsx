@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -44,11 +46,11 @@ function Footer() {
   ];
 
   const navLinks = [
-    { name: "Home", path: "/home" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Experience", path: "/experience" },
-    { name: "Contact", path: "/contact" },
+    { name: t('nav.home'), path: "/home" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.projects'), path: "/projects" },
+    { name: t('nav.experience'), path: "/experience" },
+    { name: t('nav.contact'), path: "/contact" },
   ];
 
   return (
@@ -64,8 +66,7 @@ function Footer() {
               <h3 className="text-xl font-bold">Anh Vu</h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Master’s student in Computer Science (M2), specializing in AI and
-              Data Science.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -89,7 +90,7 @@ function Footer() {
           {/* Quick Links */}
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4 text-indigo-300">
-              Quick Links
+              {t('footer.quickLinks')}
             </h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
@@ -108,7 +109,7 @@ function Footer() {
           {/* Contact Info */}
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4 text-purple-300">
-              Get In Touch
+              {t('footer.getInTouch')}
             </h4>
             <div className="space-y-3">
               <div className="flex items-center">
@@ -159,7 +160,7 @@ function Footer() {
                   to="/contact"
                   className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Let's Connect
+                  {t('footer.letsConnect')}
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="none"

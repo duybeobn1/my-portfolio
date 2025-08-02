@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
+  const { t } = useTranslation();
   return (
     <main className="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-900 min-h-screen overflow-x-hidden">
       {/* Hero section */}
@@ -32,8 +34,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          Master’s Student in Artificial Intelligent (M2), Full-Stack Developer
-          & AI Enthusiast
+          {t('home.subtitle')}
         </motion.h2>
 
         <motion.p
@@ -42,9 +43,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          Passionate about leveraging machine learning, computer vision, and web
-          technologies to craft practical, scalable solutions with real-world
-          impact.
+          {t('home.description')}
         </motion.p>
 
         <motion.div
@@ -57,13 +56,13 @@ const HomePage = () => {
             to="/projects"
             className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            View My Work
+            {t('home.viewWork')}
           </Link>
           <Link
             to="/contact"
             className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            Get In Touch
+            {t('home.getInTouch')}
           </Link>
         </motion.div>
       </section>
@@ -75,7 +74,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Certifications
+            {t('home.certifications')}
           </motion.h3>
 
           <div className="text-lg text-gray-800 space-y-6 leading-relaxed">
@@ -122,48 +121,40 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Featured Projects
+            {t('home.featuredProjects')}
           </motion.h3>
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "AI Vision Transformer",
-                description:
-                  "Advanced image restoration using Vision Transformers and deep learning",
+                titleKey: "aiVisionTransformer",
                 tech: ["Python", "PyTorch", "Computer Vision"],
               },
               {
-                title: "CO₂ Impact Tracker",
-                description:
-                  "Full-stack application for carbon footprint comparison and analysis",
+                titleKey: "co2Tracker",
                 tech: ["React", "Spring Boot", "PostgreSQL"],
               },
               {
-                title: "Crypto Trading Bot",
-                description:
-                  "Intelligent trading system with technical analysis strategies",
+                titleKey: "cryptoBot",
                 tech: ["Python", "Machine Learning", "APIs"],
               },
               {
-                title: "Smart Culinary Assistant",
-                description:
-                  "AI-powered cooking helper with OCR and object detection",
+                titleKey: "culinaryAssistant",
                 tech: ["React", "YOLO", "OCR"],
               },
             ].map((project, i) => (
               <motion.div
-                key={project.title}
+                key={project.titleKey}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100 hover:scale-105"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  {project.title}
+                  {t(`home.projects.${project.titleKey}.title`)}
                 </h4>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
+                  {t(`home.projects.${project.titleKey}.description`)}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
@@ -189,7 +180,7 @@ const HomePage = () => {
               to="/projects"
               className="inline-flex items-center px-6 py-3 text-indigo-600 font-medium border-2 border-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300"
             >
-              View All Projects
+              {t('home.viewAllProjects')}
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -217,11 +208,9 @@ const HomePage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
           >
-            "I believe in the power of technology to transform ideas into
-            reality,
+            "{t('home.personalStatement')}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-semibold">
-              {" "}
-              creating solutions that make a difference.
+              {t('home.personalStatementHighlight')}
             </span>
             "
           </motion.p>
@@ -245,7 +234,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Let's Build Something Amazing Together
+            {t('home.ctaTitle')}
           </motion.h3>
 
           <motion.p
@@ -254,8 +243,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Ready to discuss your next project? I'm always excited to
-            collaborate on innovative solutions.
+            {t('home.ctaDescription')}
           </motion.p>
 
           <motion.div
@@ -268,13 +256,13 @@ const HomePage = () => {
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Start a Conversation
+              {t('home.startConversation')}
             </Link>
             <Link
               to="/about"
               className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Learn More About Me
+              {t('home.learnMore')}
             </Link>
           </motion.div>
         </div>

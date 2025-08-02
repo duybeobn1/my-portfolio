@@ -1,6 +1,8 @@
 import { desc } from "framer-motion/client";
+import { useTranslation } from 'react-i18next';
 
 function ProjectsPage() {
+  const { t } = useTranslation();
   const projects = [
     {
       id: 1,
@@ -223,11 +225,10 @@ function ProjectsPage() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            My Projects
+            {t('projects.title')}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each one represents a
-            unique challenge and learning experience.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -240,7 +241,7 @@ function ProjectsPage() {
               {/* Image */}
               <div className="h-48 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
                 <span className="text-indigo-600 font-medium">
-                  Project Image
+                  {t('projects.projectImage')}
                 </span>
               </div>
 
@@ -269,14 +270,14 @@ function ProjectsPage() {
                     href={project.github}
                     className="flex-1 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center py-2 px-4 rounded-md hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg"
                   >
-                    GitHub
+                    {t('projects.github')}
                   </a>
                   {project.live === "#" ? (
                     <span
                       className="flex-1 bg-gray-300 text-gray-600 text-center py-2 px-4 rounded-md cursor-not-allowed shadow-inner"
                       title="Live demo not available"
                     >
-                      Unavailable
+                      {t('projects.unavailable')}
                     </span>
                   ) : (
                     <a
@@ -285,7 +286,7 @@ function ProjectsPage() {
                       rel="noopener noreferrer"
                       className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-2 px-4 rounded-md hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
                     >
-                      Live Demo
+                      {t('projects.liveDemo')}
                     </a>
                   )}
                 </div>

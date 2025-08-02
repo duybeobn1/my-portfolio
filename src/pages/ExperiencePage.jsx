@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 function ExperiencePage() {
+  const { t } = useTranslation();
   const experiences = [
     {
       id: 0,
@@ -67,18 +70,17 @@ function ExperiencePage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Experience
+            {t('experience.title')}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            My professional and academic background in software engineering, AI,
-            and web development.
+            {t('experience.subtitle')}
           </p>
         </div>
 
         {/* Work Experience */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-8">
-            Work & Project Experience
+            {t('experience.workExperience')}
           </h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
@@ -125,7 +127,7 @@ function ExperiencePage() {
         {/* Education */}
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 mb-8">
-            Education
+            {t('experience.education')}
           </h2>
           <div className="space-y-8 relative">
             {/* Timeline vertical line */}
@@ -163,7 +165,7 @@ function ExperiencePage() {
         <section className="py-24 px-6 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-semibold text-gray-900 mb-8">
-              Autres expériences
+              {t('experience.otherExperiences')}
             </h2>
             <div className="space-y-8 relative">
               {/* Timeline vertical line */}

@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Anh Vu",
+    "subtitle": "Étudiant en Master Intelligence Artificielle (M2), Développeur Full-Stack et Passionné d'IA",
+    "description": "Passionné par l'utilisation de l'apprentissage automatique, de la vision par ordinateur et des technologies web pour créer des solutions pratiques et évolutives avec un impact réel.",
+    "viewWork": "Voir Mon Travail",
+    "getInTouch": "Me Contacter",
+    "certifications": "Certifications",
+    "featuredProjects": "Projets Vedettes",
+    "viewAllProjects": "Voir Tous les Projets",
+    "personalStatement": "Je crois en la capacité de la technologie à transformer les idées en réalité,",
+    "personalStatementHighlight": " en créant des solutions qui font la différence.",
+    "ctaTitle": "Construisons Quelque Chose d'Extraordinaire Ensemble",
+    "ctaDescription": "Prêt à discuter de votre prochain projet ? Je suis toujours enthousiaste à l'idée de collaborer sur des solutions innovantes.",
+    "startConversation": "Commencer une Conversation",
+    "learnMore": "En Savoir Plus Sur Moi",
+    "projects": {
+      "aiVisionTransformer": {
+        "title": "Transformateur de Vision IA",
+        "description": "Restauration d'images avancée utilisant les Vision Transformers et l'apprentissage profond"
+      },
+      "co2Tracker": {
+        "title": "Tracker d'Impact CO₂",
+        "description": "Application full-stack pour la comparaison et l'analyse de l'empreinte carbone"
+      },
+      "cryptoBot": {
+        "title": "Bot de Trading Crypto",
+        "description": "Système de trading intelligent avec des stratégies d'analyse technique"
+      },
+      "culinaryAssistant": {
+        "title": "Assistant Culinaire Intelligent",
+        "description": "Assistant de cuisine alimenté par l'IA avec OCR et détection d'objets"
+      }
+    }
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "Découvrez mon parcours, mes compétences et ce qui me motive en tant que développeur.",
+    "greeting": "Salut, je suis Anh Vu",
+    "description1": "Je suis étudiant en Master (M2) en Informatique à l'Université Lyon 1, spécialisé en IA et Science des Données. Je suis un développeur full-stack passionné, motivé par la création de solutions numériques intelligentes et centrées sur l'utilisateur. Mon parcours mélange les technologies web avec des projets axés sur l'IA, me permettant de résoudre des problèmes complexes et de concevoir des expériences fonctionnelles et belles.",
+    "description2": "Quand je ne code pas, j'explore souvent de nouvelles technologies, je contribue à des initiatives open-source, ou je savoure un bon café en lisant les dernières avancées technologiques.",
+    "skills": "Compétences",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils",
+    "aiData": "IA/Données"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Voici quelques-uns des projets sur lesquels j'ai travaillé. Chacun représente un défi unique et une expérience d'apprentissage.",
+    "github": "GitHub",
+    "liveDemo": "Démo en Direct",
+    "unavailable": "Indisponible",
+    "projectImage": "Image du Projet"
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Mon parcours professionnel et académique en ingénierie logicielle, IA et développement web.",
+    "workExperience": "Expérience Professionnelle et Projets",
+    "education": "Formation",
+    "otherExperiences": "Autres Expériences"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "subtitle": "Je suis toujours ouvert à discuter de nouvelles opportunités, de projets créatifs, ou simplement pour une conversation amicale.",
+    "letsConnect": "Connectons-nous",
+    "description": "Que vous ayez un projet en tête, que vous souhaitiez collaborer, ou simplement dire bonjour, j'aimerais avoir de vos nouvelles. N'hésitez pas à me contacter par l'un des canaux ci-dessous.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "followMe": "Me Suivre",
+    "sendMessage": "M'Envoyer un Message",
+    "name": "Nom",
+    "subject": "Sujet",
+    "message": "Message",
+    "sendButton": "Envoyer le Message",
+    "namePlaceholder": "Votre nom",
+    "subjectPlaceholder": "De quoi s'agit-il ?",
+    "messagePlaceholder": "Parlez-moi de votre projet ou dites simplement bonjour !",
+    "thankYouMessage": "Merci pour votre message ! Je vous répondrai bientôt."
+  },
+  "footer": {
+    "description": "Étudiant en Master Informatique (M2), spécialisé en IA et Science des Données.",
+    "quickLinks": "Liens Rapides",
+    "getInTouch": "Me Contacter",
+    "letsConnect": "Connectons-nous"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Anh Vu",
+    "subtitle": "Master's Student in Artificial Intelligence (M2), Full-Stack Developer & AI Enthusiast",
+    "description": "Passionate about leveraging machine learning, computer vision, and web technologies to craft practical, scalable solutions with real-world impact.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "certifications": "Certifications",
+    "featuredProjects": "Featured Projects",
+    "viewAllProjects": "View All Projects",
+    "personalStatement": "I believe in the power of technology to transform ideas into reality,",
+    "personalStatementHighlight": " creating solutions that make a difference.",
+    "ctaTitle": "Let's Build Something Amazing Together",
+    "ctaDescription": "Ready to discuss your next project? I'm always excited to collaborate on innovative solutions.",
+    "startConversation": "Start a Conversation",
+    "learnMore": "Learn More About Me",
+    "projects": {
+      "aiVisionTransformer": {
+        "title": "AI Vision Transformer",
+        "description": "Advanced image restoration using Vision Transformers and deep learning"
+      },
+      "co2Tracker": {
+        "title": "CO₂ Impact Tracker",
+        "description": "Full-stack application for carbon footprint comparison and analysis"
+      },
+      "cryptoBot": {
+        "title": "Crypto Trading Bot",
+        "description": "Intelligent trading system with technical analysis strategies"
+      },
+      "culinaryAssistant": {
+        "title": "Smart Culinary Assistant",
+        "description": "AI-powered cooking helper with OCR and object detection"
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Learn more about my background, skills, and what drives me as a developer.",
+    "greeting": "Hi, I'm Anh Vu",
+    "description1": "I'm a Master's (M2) student in Computer Science at Université Lyon 1, specializing in AI and Data Science. I'm a passionate full-stack developer driven by crafting smart, user-centered digital solutions. My background blends web technologies with AI-driven projects, allowing me to tackle complex problems and design functional, beautiful experiences.",
+    "description2": "When I'm not coding, I'm often exploring new technologies, contributing to open-source initiatives, or enjoying a good coffee while reading up on the latest advancements in tech.",
+    "skills": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "aiData": "AI/Data"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.",
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "unavailable": "Unavailable",
+    "projectImage": "Project Image"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional and academic background in software engineering, AI, and web development.",
+    "workExperience": "Work & Project Experience",
+    "education": "Education",
+    "otherExperiences": "Other Experiences"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "I'm always open to discussing new opportunities, creative projects, or just having a friendly chat.",
+    "letsConnect": "Let's Connect",
+    "description": "Whether you have a project in mind, want to collaborate, or just want to say hello, I'd love to hear from you. Feel free to reach out through any of the channels below.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "followMe": "Follow Me",
+    "sendMessage": "Send Me a Message",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "sendButton": "Send Message",
+    "namePlaceholder": "Your name",
+    "subjectPlaceholder": "What's this about?",
+    "messagePlaceholder": "Tell me about your project or just say hello!",
+    "thankYouMessage": "Thank you for your message! I'll get back to you soon."
+  },
+  "footer": {
+    "description": "Master's student in Computer Science (M2), specializing in AI and Data Science.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get In Touch",
+    "letsConnect": "Let's Connect"
+  }
+}
