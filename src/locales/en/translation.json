@@ -58,7 +58,22 @@
     "github": "GitHub",
     "liveDemo": "Live Demo",
     "unavailable": "Unavailable",
-    "projectImage": "Project Image"
+"projectImage": "Project Image",
+    "descriptions": {
+      "portfolioWebsite": "A modern, responsive portfolio website built with React and Tailwind CSS featuring smooth animations and interactive elements.",
+      "ecommercePlatform": "Full-stack e-commerce solution with user authentication, payment processing, and admin dashboard.",
+      "smartFridge": "A smart refrigerator prototype that extends food freshness by monitoring its environment. It integrates humidity, air quality, and temperature sensors for real-time data collection. Implemented with Arduino and modular Java/C++ code for easy customization and scalability.",
+      "hybridAdventure": "A genetics simulation program that uses Mendelian inheritance to plan flower or animal breeding. Choose a target color outcome and trace back the breeding process from an initial color set. Built in Java with a focus on clear genetic visualization.",
+      "filmSearchingTool": "A minimalist web application to browse and search for movies using the TMDB API. Users can explore Top Rated, Upcoming, and Popular films, search by title, and view posters with essential info. Built for speed and clarity using modern front-end tools.",
+      "chickenInvadersClone": "A classic 2D space shooter game inspired by Chicken Invaders. Built from scratch in Java using the Java Swing library, the game features waves of enemies, projectile mechanics, collision detection, and score tracking. Designed for educational purposes and to reinforce object-oriented programming concepts.",
+      "gymnate": "A responsive and modern fitness web app that helps users discover workout programs and gyms. Designed with a focus on clean UI/UX and mobile accessibility, it offers category-based filtering, animated transitions, and an engaging landing page to promote healthy lifestyles.",
+      "cryptoXTracker": "A modern and responsive web application that tracks real-time cryptocurrency prices and market statistics. Users can view detailed charts, search for specific coins, and access key metrics such as price, market cap, and 24h changes. Designed to be fast, mobile-friendly, and visually appealing.",
+      "unityProceduralProject": "An advanced Unity project showcasing procedural animation and map generation techniques to create immersive and dynamic game environments. The project includes humanoid and non-human creature animations, reactive rigging systems, and terrain generation logic that produces a unique game map every session. It also integrates advanced gameplay mechanics like boss behavior and procedural weapon animation for enriched interactivity.",
+      "airmiumSystem": "Analyzed data workflows and user requirements, Designed and implemented a secure, scalable system for data historization and quality control, Developed web interfaces for accessing and visualizing real-time air treatment data, Proposed solutions for backup strategies and mobile/web accessibility.",
+      "edgeDetectionProject": "This project implements advanced edge detection techniques using differential operators (Prewitt, Sobel, Kirsch) combined with thresholding and refinement processes to highlight contours in images.",
+      "visionTransformer": "This project explores the capabilities of Vision Transformers (ViTs) by segmenting images into fixed-size patches and attempting to reconstruct the original image using attention-based mechanisms. By experimenting with small patch permutations (e.g., 4×4), the model evaluates whether global context can be preserved and restored from shuffled or occluded image segments. The goal is to investigate the effectiveness of transformer attention in recovering image structure, paving the way for applications in image inpainting, resizing, or restoration.",
+      "cookingAssistant": "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly."
+    }
   },
   "experience": {
     "title": "Experience",

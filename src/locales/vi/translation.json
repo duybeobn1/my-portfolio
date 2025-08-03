@@ -58,7 +58,22 @@
     "github": "GitHub",
     "liveDemo": "Demo Trực tiếp",
     "unavailable": "Không có sẵn",
-    "projectImage": "Hình Ảnh Dự án"
+"projectImage": "Hình Ảnh Dự án",
+    "descriptions": {
+      "portfolioWebsite": "Một trang web portfolio hiện đại, responsive được xây dựng bằng React và Tailwind CSS với các hoạt ảnh mượt mà và các yếu tố tương tác.",
+      "ecommercePlatform": "Giải pháp thương mại điện tử full-stack với xác thực người dùng, xử lý thanh toán và bảng điều khiển quản trị.",
+      "smartFridge": "Một nguyên mẫu tủ lạnh thông minh kéo dài độ tươi của thực phẩm bằng cách giám sát môi trường của nó. Nó tích hợp các cảm biến độ ẩm, chất lượng không khí và nhiệt độ để thu thập dữ liệu thời gian thực. Được thực hiện với Arduino và mã Java/C++ mô-đun để dễ dàng tùy chỉnh và mở rộng.",
+      "hybridAdventure": "Một chương trình mô phỏng di truyền học sử dụng di truyền Mendel để lập kế hoạch lai tạo hoa hoặc động vật. Chọn kết quả màu sắc mục tiêu và theo dõi ngược quá trình lai tạo từ một tập hợp màu ban đầu. Được xây dựng bằng Java với trọng tâm vào việc trực quan hóa di truyền rõ ràng.",
+      "filmSearchingTool": "Một ứng dụng web tối giản để duyệt và tìm kiếm phim bằng API TMDB. Người dùng có thể khám phá các bộ phim được đánh giá cao nhất, sắp tới và phổ biến, tìm kiếm theo tiêu đề và xem poster với thông tin cần thiết. Được xây dựng để có tốc độ và độ rõ ràng bằng cách sử dụng các công cụ front-end hiện đại.",
+      "chickenInvadersClone": "Một trò chơi bắn súng không gian 2D cổ điển lấy cảm hứng từ Chicken Invaders. Được xây dựng từ đầu bằng Java sử dụng thư viện Java Swing, trò chơi có các đợt kẻ thù, cơ chế tên lửa, phát hiện va chạm và theo dõi điểm số. Được thiết kế cho mục đích giáo dục và củng cố các khái niệm lập trình hướng đối tượng.",
+      "gymnate": "Một ứng dụng web thể dục hiện đại và đáng tin cậy giúp người dùng khám phá các chương trình luyện tập và phòng gym. Được thiết kế chú trọng vào UI/UX sạch và khả năng truy cập di động, cung cấp các bộ lọc theo danh mục, chuyển đổi hoạt ảnh và một trang đích hấp dẫn để thúc đẩy lối sống lành mạnh.",
+      "cryptoXTracker": "Một ứng dụng web hiện đại và đáng tin cậy theo dõi giá tiền điện tử và thống kê thị trường theo thời gian thực. Người dùng có thể xem các biểu đồ chi tiết, tìm kiếm các đồng tiền cụ thể và truy cập các chỉ số quan trọng như giá, vốn hóa thị trường và thay đổi trong 24h. Được thiết kế để nhanh chóng, thân thiện với di động và hấp dẫn về thị giác.",
+      "unityProceduralProject": "Một dự án Unity tiên tiến giới thiệu các kỹ thuật hoạt ảnh thủ t属c và tạo bản đồ để tạo ra những môi trường trò chơi chân thực và động. Dự án bao gồm hoạt ảnh sinh vật giống người và không giống người, hệ thống rigging phản ứng và logic tạo địa hình tạo ra một bản đồ trò chơi duy nhất mỗi phiên. Nó cũng tích hợp các cơ chế gameplay tiên tiến như hành vi boss và hoạt ảnh vũ khí thủ tục cho tương tác phong phú hơn.",
+      "airmiumSystem": "Phân tích quy trình dữ liệu và yêu cầu người dùng, Thiết kế và triển khai hệ thống an toàn, có thể mở rộng cho việc lưu trữ dữ liệu và kiểm soát chất lượng, Phát triển giao diện web để truy cập và trực quan hóa dữ liệu xử lý không khí theo thời gian thực, Đề xuất giải pháp cho chiến lược sao lưu và khả năng truy cập di động/web.",
+      "edgeDetectionProject": "Dự án này triển khai các kỹ thuật phát hiện biên tiên tiến sử dụng các toán tử vi phân (Prewitt, Sobel, Kirsch) kết hợp với các quá trình ngưỡng và tinh chế để làm nổi bật đường viền trong hình ảnh.",
+      "visionTransformer": "Dự án này khám phá khả năng của Vision Transformers (ViTs) bằng cách phân đoạn hình ảnh thành các miếng có kích thước cố định và cố gắng tái tạo hình ảnh gốc sử dụng các cơ chế chú ý. Bằng cách thử nghiệm với các hoán vị miếng nhỏ (ví dụ: 4×4), mô hình đánh giá liệu bối cảnh toàn cục có thể được bảo tồn và khôi phục từ các đoạn hình ảnh bị xáo trộn hoặc che khuất hay không. Mục tiêu là điều tra hiệu quả của sự chú ý của transformer trong việc khôi phục cấu trúc hình ảnh, mở đường cho các ứng dụng trong việc sửa chữa hình ảnh, thay đổi kích thước hoặc khôi phục.",
+      "cookingAssistant": "Ứng dụng web này được thiết kế để giúp người dùng quản lý việc nấu ăn hiệu quả hơn bằng cách kết hợp theo dõi nguyên liệu thông minh với quản lý công thức cá nhân hóa. Người dùng có thể lưu trữ nguyên liệu với ngày hết hạn, tạo và lên kế hoạch bữa ăn, và nhận gợi ý công thức dựa trên những gì họ có ở nhà. Nó cũng hỗ trợ quét dựa trên OCR các nhãn thực phẩm hoặc ghi chú viết tay, giúp số hóa và tổ chức dữ liệu nấu ăn một cách liền mạch."
+    }
   },
   "experience": {
     "title": "Kinh nghiệm",
