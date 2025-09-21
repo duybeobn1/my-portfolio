@@ -106,7 +106,7 @@ const HomePage = () => {
               <strong>Google Data Analytics</strong> — In Progress
             </p>
             <p>
-              <strong>IBM AI Engineering Professional Certificate</strong> — In Progress
+              <strong>IBM AI Engineering Professional Certificate</strong>
             </p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const HomePage = () => {
             {[
               {
                 titleKey: "aiVisionTransformer",
-                tech: ["Python", "PyTorch", "Computer Vision"],
+                tech: ["Transformer", "PyTorch", "Computer Vision"],
               },
               {
                 titleKey: "co2Tracker",
@@ -220,7 +220,6 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <span className="text-indigo-300 text-lg">— Anh Vu</span>
           </motion.div>
         </div>
       </section>
