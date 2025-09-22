@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          {t('home.subtitle')}
+          {t("home.subtitle")}
         </motion.h2>
 
         <motion.p
@@ -43,7 +43,7 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          {t('home.description')}
+          {t("home.description")}
         </motion.p>
 
         <motion.div
@@ -56,14 +56,21 @@ const HomePage = () => {
             to="/projects"
             className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            {t('home.viewWork')}
+            {t("home.viewWork")}
           </Link>
           <Link
             to="/contact"
             className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
-            {t('home.getInTouch')}
+            {t("home.getInTouch")}
           </Link>
+          <a
+            href="/CV_Francais.pdf" 
+            download
+            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            {t("home.downloadCV")}
+          </a>
         </motion.div>
       </section>
       <section className="py-24 px-6 bg-gradient-to-br from-white to-indigo-50">
@@ -74,7 +81,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {t('home.certifications')}
+            {t("home.certifications")}
           </motion.h3>
 
           <div className="text-lg text-gray-800 space-y-6 leading-relaxed">
@@ -121,7 +128,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {t('home.featuredProjects')}
+            {t("home.featuredProjects")}
           </motion.h3>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -180,7 +187,7 @@ const HomePage = () => {
               to="/projects"
               className="inline-flex items-center px-6 py-3 text-indigo-600 font-medium border-2 border-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300"
             >
-              {t('home.viewAllProjects')}
+              {t("home.viewAllProjects")}
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -208,9 +215,9 @@ const HomePage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
           >
-            "{t('home.personalStatement')}
+            "{t("home.personalStatement")}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-semibold">
-              {t('home.personalStatementHighlight')}
+              {t("home.personalStatementHighlight")}
             </span>
             "
           </motion.p>
@@ -219,8 +226,7 @@ const HomePage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-          >
-          </motion.div>
+          ></motion.div>
         </div>
       </section>
 
@@ -233,7 +239,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {t('home.ctaTitle')}
+            {t("home.ctaTitle")}
           </motion.h3>
 
           <motion.p
@@ -242,7 +248,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {t('home.ctaDescription')}
+            {t("home.ctaDescription")}
           </motion.p>
 
           <motion.div
@@ -255,13 +261,13 @@ const HomePage = () => {
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              {t('home.startConversation')}
+              {t("home.startConversation")}
             </Link>
             <Link
               to="/about"
               className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              {t('home.learnMore')}
+              {t("home.learnMore")}
             </Link>
           </motion.div>
         </div>
