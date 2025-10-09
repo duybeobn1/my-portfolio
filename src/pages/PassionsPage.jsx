@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import RecipeModal from "../components/RecipeModal";
 
 const PassionsPage = () => {
@@ -20,47 +20,60 @@ const PassionsPage = () => {
   };
 
   // Placeholder data - you can replace these with your actual images and content
-  const cookingImages = [
-    {
-      id: 1,
-      src: "/images/cooking/dish1.jpg", // You'll need to add these images
-      alt: "Vietnamese Pho",
-      title: "Traditional Vietnamese Pho",
-      description: "A soul-warming bowl of traditional pho with 12-hour bone broth",
-      recipe: "pho"
-    },
-    {
-      id: 2,
-      src: "/images/cooking/dish2.jpg",
-      alt: "French Pastry",
-      title: "French Croissant",
-      description: "Buttery, flaky croissants made from scratch with French technique",
-      recipe: "croissant"
-    },
-    {
-      id: 3,
-      src: "/images/cooking/dish3.jpg",
-      alt: "Fusion Dish",
-      title: "East-West Fusion",
-      description: "My signature fusion dish combining Vietnamese flavors with French technique",
-      recipe: "fusion"
+  const loadCookingImages = () => {
+    let modules = {};
+    try {
+      modules = {
+        ...import.meta.glob('/src/**/images/cooking/*.{jpg,jpeg,png,webp,gif,JPG,JPEG,PNG,WEBP,GIF}', { eager: true, as: 'url' }),
+        ...import.meta.glob('/src/**/assets/cooking/*.{jpg,jpeg,png,webp,gif,JPG,JPEG,PNG,WEBP,GIF}', { eager: true, as: 'url' }),
+        ...import.meta.glob('/src/**/cooking/*.{jpg,jpeg,png,webp,gif,JPG,JPEG,PNG,WEBP,GIF}', { eager: true, as: 'url' }),
+      };
+    } catch (e) {
+      // ignore – will fallback to public paths
     }
-  ];
+    const urls = Object.values(modules || {});
+    if (urls.length > 0) {
+      return urls.map((src, idx) => ({ id: idx + 1, src, alt: 'Signature dish', title: `Dish ${idx + 1}` }));
+    }
+    // Fallback to public folder images
+    const candidates = [
+      '/images/cooking/trout_potato_beetsalad.jpeg',
+      '/images/cooking/IMG_0533.JPG',
+      '/images/cooking/IMG_0553.JPG',
+      '/images/cooking/IMG_0562.JPG',
+      '/images/cooking/IMG_0565.JPG',
+      '/images/cooking/IMG_0569.JPG',
+      '/images/cooking/IMG_1130.JPG',
+      '/images/cooking/IMG_1138.JPG',
+    ];
+    return candidates.map((src, idx) => ({ id: idx + 1, src, alt: 'Signature dish', title: `Dish ${idx + 1}` }));
+  };
 
-  const lionDanceImages = [
+  const cookingImages = useMemo(() => {
+    const arr = loadCookingImages();
+    // Shuffle once per mount for a more organic order
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
+  // Lion Dance media now uses YouTube embeds instead of local images
+  const lionDanceMedia = [
     {
       id: 1,
-      src: "/images/liondance/performance1.jpg",
-      alt: "Lion Dance Performance",
-      title: "Chinese New Year Performance 2024",
-      description: "Leading a traditional lion dance performance for Chinese New Year celebrations"
+      type: "youtube",
+      youtubeId: "vyjFoTYKk50",
+      start: 149,
+      title: "Lion Dance World Championship 2023 — Malaysia"
     },
     {
       id: 2,
-      src: "/images/liondance/performance2.jpg",
-      alt: "Lion Dance Training",
-      title: "Training Session",
-      description: "Practicing the intricate movements and coordination required for lion dance"
+      type: "youtube",
+      youtubeId: "fxaqCjmoxvM",
+      start: 264,
+      title: "Cultural Competition — Hong Kong 2024"
     }
   ];
 
@@ -80,10 +93,9 @@ const PassionsPage = () => {
   ];
 
   const tabs = [
-    { id: "cooking", name: t("passions.tabs.cooking"), icon: "🍳" },
-    { id: "liondance", name: t("passions.tabs.lionDance"), icon: "🦁" },
-    { id: "music", name: t("passions.tabs.music"), icon: "🎵" },
-    { id: "philosophy", name: t("passions.tabs.philosophy"), icon: "💭" }
+    { id: "cooking", name: t("passions.tabs.cooking") },
+    { id: "liondance", name: t("passions.tabs.lionDance") },
+    { id: "music", name: t("passions.tabs.music") }
   ];
 
   const renderCookingSection = () => (
@@ -93,18 +105,16 @@ const PassionsPage = () => {
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
-      {/* Cooking Philosophy */}
+      {/* Culinary Philosophy - Marco Pierre White quotes (no icons) */}
       <motion.div whileHover={{ y: -6 }} className="bg-minimal rounded-xl p-8 border border-line card-hover card-hover-pink">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-          <span className="mr-3">👨‍🍳</span>
-          <span className="hl-bar hl-pink">{t("passions.cooking.philosophy.title")}</span>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <span className="hl-bar hl-pink">Culinary Philosophy</span>
         </h3>
-        <p className="text-gray-700 leading-relaxed text-lg italic">
-          "{t("passions.cooking.philosophy.quote")}"
-        </p>
-        <p className="text-gray-600 mt-4 leading-relaxed">
-          {t("passions.cooking.philosophy.description")}
-        </p>
+        <div className="space-y-4 text-gray-700">
+          <blockquote className="italic leading-relaxed">“If you want to be a great chef, you have to work with great chefs.” — Marco Pierre White</blockquote>
+          <blockquote className="italic leading-relaxed">“Mother Nature is the true artist; her simple produce, handled with respect, is perfection.” — Marco Pierre White</blockquote>
+          <blockquote className="italic leading-relaxed">“Success is born out of arrogance, but arrogance is born out of success.” — Marco Pierre White</blockquote>
+        </div>
       </motion.div>
 
       {/* Professional Experience */}
@@ -135,47 +145,44 @@ const PassionsPage = () => {
             <h4 className="font-semibold text-gray-900 mb-2">
               {t("passions.cooking.experience.education")}
             </h4>
-            <ul className="text-gray-600 space-y-1">
-              <li>• Le Cordon Bleu</li>
-              <li>• Hong Kong University - Science of Gastronomy</li>
-              <li>• Institut Paul Bocuse</li>
-            </ul>
+            <p className="text-gray-600">
+              Le Cordon Bleu · Hong Kong University — Science of Gastronomy · Institut Paul Bocuse
+            </p>
           </div>
         </div>
-</motion.div>
+      </motion.div>
 
-      {/* Cooking Gallery */}
+      {/* Cooking Gallery - image-focused mosaic (no recipe overlays) */}
       <motion.div whileHover={{ y: -6 }} className="bg-minimal rounded-xl p-8 border border-line card-hover card-hover-blue">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">
           {t("passions.cooking.gallery.title")}
         </h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          {cookingImages.map((image) => (
-            <motion.div
-              key={image.id}
-              whileHover={{ scale: 1.05 }}
-              className="group cursor-pointer"
-              onClick={() => openRecipeModal(image.recipe)}
-            >
-              <div className="relative overflow-hidden rounded-lg mb-3">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  onError={(e) => {
-                    e.target.src = `https://via.placeholder.com/300x200/f59e0b/white?text=${encodeURIComponent(image.title)}`;
-                  }}
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                  <div className="bg-white bg-opacity-90 px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-sm font-medium text-gray-800">View Recipe</span>
-                  </div>
+        {/* Masonry layout using CSS columns to remove gaps */}
+        <div className="columns-1 sm:columns-2 md:columns-2 lg:columns-3 xl:columns-3 gap-4 [column-fill:_balance]">
+          {cookingImages.map((image, idx) => {
+            const frames = ["collage-a", "collage-b", "collage-c", "collage-d", "collage-e", "collage-f"];
+            const tapes = ["tape-yellow", "tape-blue", "tape-pink", "tape-green"];
+            // Strong bias toward wider views: 3:2 and 16:9, with occasional 2:1 and 21:9
+            const ratios = ["ar-3x2", "ar-16x9", "ar-3x2", "ar-2x1", "ar-3x2", "ar-16x9", "ar-21x9"]; 
+            const frameClass = frames[idx % frames.length];
+            const tapeClass = tapes[idx % tapes.length];
+            const ratioClass = ratios[idx % ratios.length];
+            return (
+              <figure key={image.id} className={`mb-4 break-inside-avoid collage-card ${frameClass} ${tapeClass} group`}>
+                <div className={`ratio-box ${ratioClass}`}>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover rounded-[10px] transition-transform duration-500 group-hover:scale-[1.02]"
+                    onError={(e) => {
+                      e.target.src = `https://via.placeholder.com/800x600/ddd/222?text=${encodeURIComponent(image.title)}`;
+                    }}
+                  />
                 </div>
-              </div>
-              <h4 className="font-semibold text-gray-900">{image.title}</h4>
-              <p className="text-gray-600 text-sm">{image.description}</p>
-            </motion.div>
-          ))}
+              </figure>
+            );
+          })}
         </div>
       </motion.div>
     </motion.div>
@@ -191,11 +198,13 @@ const PassionsPage = () => {
       {/* Lion Dance Introduction */}
       <motion.div whileHover={{ y: -6 }} className="bg-minimal rounded-xl p-8 border border-line card-hover card-hover-yellow">
         <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-          <span className="mr-3">🦁</span>
           <span className="hl-bar hl-yellow">{t("passions.lionDance.intro.title")}</span>
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          {t("passions.lionDance.intro.description")}
+        <p className="text-gray-700 leading-relaxed mb-3">
+          {t("passions.lionDance.intro.definition")}
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          {t("passions.lionDance.intro.personal")}
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
@@ -229,30 +238,59 @@ const PassionsPage = () => {
           {t("passions.lionDance.gallery.title")}
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
-          {lionDanceImages.map((image) => (
+          {lionDanceMedia.map((item) => (
             <motion.div
-              key={image.id}
+              key={item.id}
               whileHover={{ scale: 1.02 }}
               className="group"
             >
               <div className="relative overflow-hidden rounded-lg mb-3">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                  onError={(e) => {
-                    e.target.src = `https://via.placeholder.com/400x300/ef4444/white?text=${encodeURIComponent(image.title)}`;
-                  }}
-                />
+                <div className="ratio-box ar-16x9">
+                  {item.type === "youtube" ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${item.youtubeId}?start=${item.start || 0}&rel=0&modestbranding=1`}
+                      title={item.title}
+                      className="w-full h-full"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : null}
+                </div>
               </div>
-              <h4 className="font-semibold text-gray-900">{image.title}</h4>
-              <p className="text-gray-600 text-sm">{image.description}</p>
+              <h4 className="font-semibold text-gray-900">{item.title}</h4>
             </motion.div>
           ))}
         </div>
       </motion.div>
     </motion.div>
   );
+
+  // SoundCloud widget integration
+  const scIframeRef = useRef(null);
+  const [musicTracks, setMusicTracks] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(20);
+  useEffect(() => {
+    const init = () => {
+      try {
+        if (!scIframeRef.current || !window.SC || !window.SC.Widget) return;
+        const widget = window.SC.Widget(scIframeRef.current);
+        widget.getSounds && widget.getSounds((sounds) => setMusicTracks(Array.isArray(sounds) ? sounds : []));
+      } catch (e) {
+        // silent
+      }
+    };
+    if (!window.SC || !window.SC.Widget) {
+      const s = document.createElement('script');
+      s.src = 'https://w.soundcloud.com/player/api.js';
+      s.async = true;
+      s.onload = init;
+      document.body.appendChild(s);
+    } else {
+      init();
+    }
+  }, []);
 
   const renderMusicSection = () => (
     <motion.div
@@ -263,79 +301,52 @@ const PassionsPage = () => {
     >
       <motion.div whileHover={{ y: -6 }} className="bg-minimal rounded-xl p-8 border border-line card-hover card-hover-blue">
         <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-          <span className="mr-3">🎵</span>
           {t("passions.music.intro.title")}
         </h3>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          {t("passions.music.intro.description")}
+        <p className="text-gray-700 leading-relaxed mb-4">
+          I'm a pianist / guitarist focusing on jazz and blues improvisation. I stopped playing actively, but my works are still there — always.
         </p>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {musicContent.map((item) => (
-            <div
-              key={item.id}
-              className="bg-minimal p-6 rounded-lg border border-line"
-            >
-              <h4 className="font-semibold text-gray-900 text-lg mb-2">
-                {item.instrument}
-              </h4>
-              <p className="text-gray-600 mb-3">{item.description}</p>
-              <span className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">
-                {item.experience}
-              </span>
+        <p className="text-gray-600">
+          Listen on SoundCloud:
+          <a href="https://soundcloud.com/13092017" target="_blank" rel="noreferrer" className="ml-2 link-circle">soundcloud.com/13092017</a>
+        </p>
+        <div className="mt-6">
+          <div className="w-full overflow-hidden rounded-lg border border-line">
+            <iframe
+              ref={scIframeRef}
+              title="SoundCloud Player"
+              className="w-full h-[420px] sm:h-[520px] md:h-[640px]"
+              loading="lazy"
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/13092017&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            />
+          </div>
+          {/* Larger, clean track titles fetched via Widget API (fallbacks to empty when unavailable) */}
+          {musicTracks && musicTracks.length > 0 && (
+            <div className="mt-4 space-y-2">
+              {musicTracks.slice(0, visibleCount).map((trk) => (
+                <a
+                  key={trk.id}
+                  href={trk.permalink_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-lg sm:text-xl font-semibold text-gray-900 hover:underline"
+                >
+                  {trk.title}
+                </a>
+              ))}
             </div>
-          ))}
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-
-  const renderPhilosophySection = () => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
-      <motion.div whileHover={{ y: -6 }} className="bg-minimal rounded-xl p-8 border border-line card-hover card-hover-blue">
-        <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="mr-3">💭</span>
-          <span className="hl-bar hl-blue">{t("passions.philosophy.title")}</span>
-        </h3>
-        
-        <div className="space-y-8">
-          {/* Life Philosophy */}
-          <div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">
-              {t("passions.philosophy.life.title")}
-            </h4>
-            <blockquote className="text-lg italic text-gray-700 border-l-4 border-indigo-400 pl-6 py-2">
-              "{t("passions.philosophy.life.quote")}"
-            </blockquote>
-            <p className="text-gray-600 mt-4 leading-relaxed">
-              {t("passions.philosophy.life.description")}
-            </p>
-          </div>
-
-          {/* Work Philosophy */}
-          <div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">
-              {t("passions.philosophy.work.title")}
-            </h4>
-            <p className="text-gray-600 leading-relaxed">
-              {t("passions.philosophy.work.description")}
-            </p>
-          </div>
-
-          {/* Cultural Bridge */}
-          <div>
-            <h4 className="text-xl font-semibold text-gray-900 mb-3">
-              {t("passions.philosophy.cultural.title")}
-            </h4>
-            <p className="text-gray-600 leading-relaxed">
-              {t("passions.philosophy.cultural.description")}
-            </p>
-          </div>
+          )}
+          {musicTracks && musicTracks.length > visibleCount && (
+            <div className="mt-3">
+              <button
+                onClick={() => setVisibleCount((c) => c + 20)}
+                className="btn-pill"
+              >
+                Show more songs
+              </button>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -349,8 +360,6 @@ const PassionsPage = () => {
         return renderLionDanceSection();
       case "music":
         return renderMusicSection();
-      case "philosophy":
-        return renderPhilosophySection();
       default:
         return renderCookingSection();
     }
@@ -382,7 +391,7 @@ const PassionsPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap justify-center gap-4 mb-12 border-t border-b border-line py-4"
           >
-            {tabs.map((tab) => (
+          {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
@@ -392,7 +401,6 @@ const PassionsPage = () => {
                     : "bg-minimal hover:bg-[rgba(218,227,243,0.3)]"
                 }`}
               >
-                <span className="text-lg mr-2">{tab.icon}</span>
                 {tab.name}
               </button>
             ))}

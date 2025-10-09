@@ -240,6 +240,34 @@ body {
 .icon-breath { animation: breath 3s ease-in-out infinite; display: inline-flex; }
 .tilt-hover:hover { transform: rotate(6deg); }
 
+/* Masonry helpers */
+.break-inside-avoid { break-inside: avoid; }
+.masonry-img { display: block; width: 100%; height: auto; }
+
+/* Collage-style frames for a more artistic, random look */
+.collage-card { position: relative; padding: 8px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); transition: transform 200ms ease, box-shadow 200ms ease; }
+.collage-card:hover { transform: translateY(-2px) scale(1.01); box-shadow: 0 10px 24px rgba(0,0,0,0.09); }
+.collage-a { transform: rotate(-1.2deg); margin-top: .25rem; }
+.collage-b { transform: rotate(1.1deg); margin-top: .75rem; }
+.collage-c { transform: rotate(-0.6deg); }
+.collage-d { transform: rotate(0.9deg); margin-top: .5rem; }
+.collage-e { transform: rotate(-1.6deg); margin-top: 1rem; }
+.collage-f { transform: rotate(0.3deg); margin-top: .25rem; }
+/* "Tape" accent on top of frames — pastel variants */
+.collage-card::before { content: ""; position: absolute; top: 6px; left: 12px; width: 56px; height: 14px; background: rgba(218,227,243,0.75); border-radius: 3px; transform: rotate(-6deg); box-shadow: 0 1px 2px rgba(0,0,0,0.06); opacity: .8; }
+.tape-yellow::before { background: rgba(255,242,204,0.8); }
+.tape-blue::before { background: rgba(218,227,243,0.85); }
+.tape-pink::before { background: rgba(242,213,213,0.85); }
+.tape-green::before { background: rgba(211,235,211,0.8); }
+
+/* Wide aspect-ratio variants for collage tiles */
+.ratio-box { width: 100%; }
+.ar-4x3 { aspect-ratio: 4 / 3; }
+.ar-3x2 { aspect-ratio: 3 / 2; }
+.ar-16x9 { aspect-ratio: 16 / 9; }
+.ar-2x1 { aspect-ratio: 2 / 1; }
+.ar-21x9 { aspect-ratio: 21 / 9; }
+
 /* Cut-corner card with accent wedge */
 .cut-card { position: relative; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,0.8); transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease; }
 .cut-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); border-color: #a9a9a9; background: rgba(255,255,255,0.9); }

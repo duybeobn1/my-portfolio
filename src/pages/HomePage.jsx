@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 
 const HomePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const sections = [
     { id: "intro", label: t("nav.home") || "Intro", color: "pink" },
     { id: "certs", label: t("home.certifications") || "Certifications", color: "yellow" },
@@ -12,6 +12,8 @@ const HomePage = () => {
     { id: "cta", label: t("home.ctaTitle") || "Contact", color: "green" },
   ];
   const [active, setActive] = useState("intro");
+  // Choose CV file based on active language: fr => French, otherwise English
+  const cvHref = i18n.language === 'fr' ? '/cv/CV_Francais_v2.pdf' : '/cv/CV_Eng_v2.pdf';
 
   useEffect(() => {
     const els = sections.map(s => document.getElementById(s.id)).filter(Boolean);
@@ -84,7 +86,7 @@ const HomePage = () => {
           <Link to="/contact" className="link-circle">
             {t("home.getInTouch")}
           </Link>
-          <a href="/CV_Francais.pdf" download className="link-circle">
+          <a href={cvHref} download className="link-circle">
             {t("home.downloadCV")}
           </a>
         </motion.div>
