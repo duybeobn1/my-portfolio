@@ -59,13 +59,11 @@ function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-minimal text-default">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {t('contact.title')}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6"><span className="hl-bar hl-pink">{t('contact.title')}</span></h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
@@ -89,9 +87,9 @@ function ContactPage() {
               <a
                 key={index}
                 href={info.link}
-                className="group flex flex-col items-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="group flex flex-col items-center p-8 bg-minimal rounded-xl border border-line transition-all duration-300 transform hover:scale-[1.01]"
               >
-                <div className="text-blue-600 mb-4 group-hover:text-blue-700">
+                <div className="text-gray-800 mb-4">
                   {info.icon}
                 </div>
                 <p className="text-sm text-gray-500 mb-2">{info.label}</p>
@@ -105,14 +103,14 @@ function ContactPage() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">
               {t('contact.followMe')}
             </h3>
-            <div className="flex justify-center space-x-6">
+            <div className="flex justify-center space-x-3">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-gray-100 text-gray-600 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                  className="link-circle text-gray-700"
                   aria-label={social.name}
                 >
                   {social.icon}

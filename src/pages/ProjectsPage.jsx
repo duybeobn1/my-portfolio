@@ -227,74 +227,53 @@ let projects = [
   ];
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-minimal text-default">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            {t('projects.title')}
+        {/* Title with highlight block */}
+        <div className="mb-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <span className="hl-bar hl-yellow">{t('projects.title')}</span>
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mt-4 mx-auto">
             {t('projects.subtitle')}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Lined list */}
+        <div className="row-list">
           {projects
             .filter(project => !project.title.includes('Deprecated'))
-            .map((project) => (
-            <div
-              key={project.id}
-              className="bg-gradient-to-br from-white to-indigo-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-300 border border-indigo-100 flex flex-col h-auto"
-            >
+            .map((project, idx) => {
+              const accents = ['hl-pink','hl-yellow','hl-blue','hl-green'];
+              const accent = accents[idx % accents.length];
+              return (
+                <div key={project.id} className="row-item">
+                  {/* Title */}
+                  <div className="row-title text-xl">
+                    <span className={`hl-bar ${accent}`}>{project.title}</span>
+                    <div className="row-tech">
+                      {project.technologies.join(' · ')}
+                    </div>
+                  </div>
 
-              {/* Content */}
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
-{project.key ? t(`projects.descriptions.${project.key}`) : project.description}
-                </p>
+                  {/* Description */}
+                  <div className="row-desc leading-relaxed">
+                    {project.key ? t(`projects.descriptions.${project.key}`) : project.description}
+                  </div>
 
-                <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm rounded-full border border-indigo-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4 mt-auto pt-2">
-                  <a
-                    href={project.github}
-                    className="flex-1 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center py-2 px-4 rounded-md hover:from-gray-700 hover:to-gray-800 transition-all duration-200 shadow-lg"
-                  >
-                    {t('projects.github')}
-                  </a>
-                  {project.live === "#" ? (
-                    <span
-                      className="flex-1 bg-gray-300 text-gray-600 text-center py-2 px-4 rounded-md cursor-not-allowed shadow-inner"
-                      title="Live demo not available"
-                    >
-                      {t('projects.unavailable')}
-                    </span>
-                  ) : (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center py-2 px-4 rounded-md hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg"
-                    >
-                      {t('projects.liveDemo')}
+                  {/* Actions */}
+                  <div className="flex items-start gap-3 justify-end">
+                    <a href={project.github} className="link-circle" target="_blank" rel="noopener noreferrer">
+                      {t('projects.github')}
                     </a>
-                  )}
+                    {project.live === '#'
+                      ? <span className="link-circle opacity-60 cursor-not-allowed">{t('projects.unavailable')}</span>
+                      : <a href={project.live} className="link-circle" target="_blank" rel="noopener noreferrer">{t('projects.liveDemo')}</a>
+                    }
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
         </div>
       </div>
     </div>

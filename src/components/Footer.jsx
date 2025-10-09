@@ -54,21 +54,21 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 text-white">
+    <footer className="bg-minimal border-t border-line text-default">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand & Description */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">AV</span>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mr-3 border border-line">
+                <span className="font-bold text-lg">AV</span>
               </div>
               <h3 className="text-xl font-bold">Anh Vu</h3>
             </div>
-            <p className="text-gray-300 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-6">
               {t('footer.description')}
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               {socialLinks.map((social) => {
                 const isExternal = !social.url.startsWith("mailto:");
                 return (
@@ -77,7 +77,7 @@ function Footer() {
                     href={social.url}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
-                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform"
+                    className="link-circle"
                     aria-label={social.name}
                   >
                     {social.icon}
@@ -89,15 +89,13 @@ function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-indigo-300">
-              {t('footer.quickLinks')}
-            </h4>
+            <h4 className="text-lg font-semibold mb-4"><span className="hl-bar hl-blue">{t('footer.quickLinks')}</span></h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 transform inline-block"
+                    className="text-gray-700 hover:text-gray-900 transition-colors duration-200 inline-block"
                   >
                     {link.name}
                   </Link>
@@ -108,13 +106,11 @@ function Footer() {
 
           {/* Contact Info */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4 text-purple-300">
-              {t('footer.getInTouch')}
-            </h4>
+            <h4 className="text-lg font-semibold mb-4"><span className="hl-bar hl-yellow">{t('footer.getInTouch')}</span></h4>
             <div className="space-y-3">
               <div className="flex items-center">
                 <svg
-                  className="w-5 h-5 text-indigo-400 mr-3"
+                  className="w-5 h-5 text-gray-700 mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -128,14 +124,14 @@ function Footer() {
                 </svg>
                 <a
                   href="mailto:avu270201@gmail.com"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
                 >
                   avu270201@gmail.com
                 </a>
               </div>
               <div className="flex items-center">
                 <svg
-                  className="w-5 h-5 text-purple-400 mr-3"
+                  className="w-5 h-5 text-gray-700 mr-3"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -153,12 +149,12 @@ function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-gray-300">Lyon, France</span>
+                <span className="text-gray-700">Lyon, France</span>
               </div>
               <div className="mt-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                  className="link-circle text-gray-900"
                 >
                   {t('footer.letsConnect')}
                   <svg
@@ -181,11 +177,11 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">
+        <div className="border-t border-line mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-600 text-sm mb-4 md:mb-0">
             <p>© {currentYear} Anh Vu. All rights reserved.</p>
           </div>
-          <div className="flex items-center space-x-6 text-sm text-gray-400">
+          <div className="flex items-center space-x-6 text-sm text-gray-600">
             <span>Built with React & Tailwind CSS</span>
           </div>
         </div>

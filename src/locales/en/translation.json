@@ -4,6 +4,7 @@
     "about": "About",
     "projects": "Projects",
     "experience": "Experience",
+    "passions": "Passions",
     "contact": "Contact"
   },
   "home": {
@@ -21,6 +22,7 @@
     "ctaDescription": "Ready to discuss your next project? I'm always excited to collaborate on innovative solutions.",
     "startConversation": "Start a Conversation",
     "learnMore": "Learn More About Me",
+    "explorePassions": "Explore My Passions",
     "downloadCV": "Download My CV",
     "projects": {
       "aiVisionTransformer": {
@@ -51,7 +53,17 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Tools",
-    "aiData": "AI/Data"
+    "aiData": "AI/Data",
+    "beyondCode": "Beyond Code",
+    "personalInterests": "But there's more to me than just code! I'm also a professional chef consultant, lion dance performer, and music enthusiast. These diverse experiences shape my creative approach to problem-solving and bring a unique perspective to my technical work.",
+    "discoverMore": "Discover My Passions",
+    "personalHighlights": "What Makes Me Unique",
+    "culinaryArtist": "Culinary Artist",
+    "culinaryDescription": "Professional chef consultant for Michelin Guide restaurants, blending Vietnamese tradition with French techniques.",
+    "culturalPerformer": "Cultural Performer",
+    "lionDanceDescription": "Professional lion dance performer, preserving and sharing traditional Chinese cultural arts.",
+    "musicEnthusiast": "Music Enthusiast",
+    "musicDescription": "Piano and traditional Vietnamese instruments, bridging cultures through musical expression."
   },
   "projects": {
     "title": "My Projects",
@@ -101,6 +113,74 @@
     "subjectPlaceholder": "What's this about?",
     "messagePlaceholder": "Tell me about your project or just say hello!",
     "thankYouMessage": "Thank you for your message! I'll get back to you soon."
+  },
+  "passions": {
+    "title": "My Passions",
+    "subtitle": "Beyond coding, discover the creative pursuits and cultural experiences that shape who I am.",
+    "tabs": {
+      "cooking": "Culinary Arts",
+      "lionDance": "Lion Dance",
+      "music": "Music",
+      "philosophy": "Philosophy"
+    },
+    "cooking": {
+      "philosophy": {
+        "title": "Culinary Philosophy",
+        "quote": "Cooking is like programming - both require patience, precision, and the ability to blend different elements into something beautiful and functional.",
+        "description": "My approach to cooking mirrors my approach to development. Every ingredient has a purpose, every technique serves a function, and the end result should nourish both body and soul. Just as I write clean, maintainable code, I create dishes that respect tradition while embracing innovation."
+      },
+      "experience": {
+        "title": "Professional Experience",
+        "consultant": "Menu Consultant",
+        "chef": "Chef de Partie",
+        "education": "Culinary Education"
+      },
+      "gallery": {
+        "title": "Signature Dishes"
+      }
+    },
+    "lionDance": {
+      "intro": {
+        "title": "Traditional Lion Dance",
+        "description": "Lion dance is more than performance - it's cultural preservation, athletic art, and spiritual practice combined. Through years of training and performance, I've learned the discipline, teamwork, and cultural respect that this ancient art demands."
+      },
+      "skills": "Performance Skills",
+      "performances": "Performance Types",
+      "gallery": {
+        "title": "Performance Gallery"
+      }
+    },
+    "music": {
+      "intro": {
+        "title": "Musical Expression",
+        "description": "Music has always been a bridge between my Vietnamese heritage and my life in France. Through both Western and traditional Vietnamese instruments, I explore the universal language that connects all cultures."
+      }
+    },
+    "philosophy": {
+      "title": "Life Philosophy",
+      "life": {
+        "title": "On Life & Growth",
+        "quote": "Every skill I learn, every culture I embrace, makes me a more complete developer and human being.",
+        "description": "I believe that diversity of experience leads to innovation. My background in cooking teaches me patience and precision. Lion dance shows me the power of teamwork and cultural respect. Music connects me to emotions and creativity. All of these inform how I approach technology and problem-solving."
+      },
+      "work": {
+        "title": "On Technology & Purpose",
+        "description": "Technology should serve humanity, not the other way around. Just as I cook to nourish people and perform to preserve culture, I code to create solutions that make people's lives better. Every project is an opportunity to blend technical excellence with human empathy."
+      },
+      "cultural": {
+        "title": "Cultural Bridge Building",
+        "description": "Living between Vietnamese heritage and French culture, working with international teams, performing traditional arts - all of these experiences teach me that the best solutions come from understanding and respecting different perspectives. In code, as in life, diversity is strength."
+      }
+    }
+  },
+  "recipe": {
+    "prepTime": "Prep Time",
+    "cookTime": "Cook Time",
+    "servings": "Servings",
+    "difficulty": "Difficulty",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "philosophy": "My Philosophy"
   },
   "footer": {
     "description": "Master's student in Computer Science (M2), specializing in AI and Data Science.",

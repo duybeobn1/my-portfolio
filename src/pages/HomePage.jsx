@@ -1,31 +1,57 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const sections = [
+    { id: "intro", label: t("nav.home") || "Intro", color: "pink" },
+    { id: "certs", label: t("home.certifications") || "Certifications", color: "yellow" },
+    { id: "featured", label: t("home.featuredProjects") || "Projects", color: "blue" },
+    { id: "cta", label: t("home.ctaTitle") || "Contact", color: "green" },
+  ];
+  const [active, setActive] = useState("intro");
+
+  useEffect(() => {
+    const els = sections.map(s => document.getElementById(s.id)).filter(Boolean);
+    const obs = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+    }, { threshold: [0.5, 0.75] });
+    els.forEach(el => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <main className="relative bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-900 min-h-screen overflow-x-hidden">
+    <main className="relative bg-minimal text-default min-h-screen overflow-x-hidden">
       {/* Hero section */}
-      <section className="h-screen flex flex-col justify-center items-center px-4 text-center pt-16">
+      <section id="intro" className="h-screen flex flex-col justify-center items-center px-4 text-center pt-16">
         <motion.div
           className="mb-6"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full flex items-center justify-center border border-line bg-[var(--blue)]">
             <span className="text-white text-2xl font-bold">AV</span>
           </div>
         </motion.div>
 
         <motion.h1
-          className="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 bg-clip-text text-transparent mb-6"
+          className="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tight mb-6"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Anh Vu
+          <span className="hl-bar hl-yellow">Anh Vu</span>
         </motion.h1>
 
         <motion.h2
@@ -52,31 +78,21 @@ const HomePage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1 }}
         >
-          <Link
-            to="/projects"
-            className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
+          <Link to="/projects" className="link-circle">
             {t("home.viewWork")}
           </Link>
-          <Link
-            to="/contact"
-            className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
+          <Link to="/contact" className="link-circle">
             {t("home.getInTouch")}
           </Link>
-          <a
-            href="/CV_Francais.pdf" 
-            download
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-          >
+          <a href="/CV_Francais.pdf" download className="link-circle">
             {t("home.downloadCV")}
           </a>
         </motion.div>
       </section>
-      <section className="py-24 px-6 bg-gradient-to-br from-white to-indigo-50">
+      <section id="certs" className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h3
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -120,10 +136,10 @@ const HomePage = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 px-6 bg-gradient-to-r from-indigo-50 to-purple-50">
+      <section id="featured" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.h3
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -152,27 +168,20 @@ const HomePage = () => {
             ].map((project, i) => (
               <motion.div
                 key={project.titleKey}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100 hover:scale-105"
+                className="p-6 border-t border-line"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.15 }}
               >
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                  {t(`home.projects.${project.titleKey}.title`)}
+                <h4 className="text-xl font-semibold mb-2">
+                  <span className={`hl-bar ${['hl-pink','hl-yellow','hl-blue','hl-green'][i % 4]}`}>
+                    {t(`home.projects.${project.titleKey}.title`)}
+                  </span>
                 </h4>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {t(`home.projects.${project.titleKey}.description`)}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-sm rounded-full border border-indigo-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <div className="row-tech">{project.tech.join(' · ')}</div>
               </motion.div>
             ))}
           </div>
@@ -183,58 +192,22 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Link
-              to="/projects"
-              className="inline-flex items-center px-6 py-3 text-indigo-600 font-medium border-2 border-indigo-600 rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300"
-            >
+            <Link to="/projects" className="link-circle inline-flex items-center">
               {t("home.viewAllProjects")}
-              <svg
-                className="ml-2 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* Personal Statement */}
-      <section className="py-32 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 text-white flex items-center justify-center px-4 text-center">
-        <div className="max-w-4xl">
-          <motion.p
-            className="text-2xl sm:text-3xl lg:text-4xl font-light leading-relaxed"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-          >
-            "{t("home.personalStatement")}
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-semibold">
-              {t("home.personalStatementHighlight")}
-            </span>
-            "
-          </motion.p>
-          <motion.div
-            className="mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          ></motion.div>
-        </div>
-      </section>
 
       {/* Contact CTA */}
-      <section className="py-24 px-6 bg-gradient-to-br from-white to-indigo-50">
+      <section id="cta" className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h3
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -257,21 +230,26 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
+            <Link to="/contact" className="link-circle">
               {t("home.startConversation")}
             </Link>
-            <Link
-              to="/about"
-              className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-medium rounded-xl hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
+            <Link to="/about" className="link-circle">
               {t("home.learnMore")}
+            </Link>
+            <Link to="/passions" className="link-circle">
+              {t("home.explorePassions") || "Explore My Passions"}
             </Link>
           </motion.div>
         </div>
       </section>
+      {/* Side section nav */}
+      <nav className="side-nav right-4" aria-label="Section navigation">
+        {sections.map(s => (
+          <button key={s.id} onClick={() => scrollTo(s.id)} className={`side-nav-item ${active === s.id ? 'active' : ''}`} title={s.label} aria-label={`Go to ${s.label}`}>
+            <span className={`side-diamond ${s.color}`}></span>
+          </button>
+        ))}
+      </nav>
     </main>
   );
 };

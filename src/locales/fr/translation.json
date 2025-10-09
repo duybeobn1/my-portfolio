@@ -4,6 +4,7 @@
     "about": "À propos",
     "projects": "Projets",
     "experience": "Expérience",
+    "passions": "Passions",
     "contact": "Contact"
   },
   "home": {
@@ -21,6 +22,7 @@
     "ctaDescription": "Prêt à discuter de votre prochain projet ? Je suis toujours enthousiaste à l'idée de collaborer sur des solutions innovantes.",
     "startConversation": "Commencer une Conversation",
     "learnMore": "En Savoir Plus Sur Moi",
+    "explorePassions": "Explorer Mes Passions",
     "downloadCV": "Télécharger Mon CV",
     "projects": {
       "aiVisionTransformer": {
@@ -51,7 +53,17 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Outils",
-    "aiData": "IA/Données"
+    "aiData": "IA/Données",
+    "beyondCode": "Au-delà du Code",
+    "personalInterests": "Mais il y a plus en moi que juste du code ! Je suis aussi consultant chef professionnel, artiste de danse du lion, et passionné de musique. Ces expériences diverses façonnent mon approche créative de la résolution de problèmes et apportent une perspective unique à mon travail technique.",
+    "discoverMore": "Découvrir Mes Passions",
+    "personalHighlights": "Ce Qui Me Rend Unique",
+    "culinaryArtist": "Artiste Culinaire",
+    "culinaryDescription": "Consultant chef professionnel pour restaurants du Guide Michelin, mélangeant tradition vietnamienne et techniques françaises.",
+    "culturalPerformer": "Artiste Culturel",
+    "lionDanceDescription": "Artiste professionnel de danse du lion, préservant et partageant les arts culturels chinois traditionnels.",
+    "musicEnthusiast": "Passionné de Musique",
+    "musicDescription": "Piano et instruments vietnamiens traditionnels, créant des ponts culturels par l'expression musicale."
   },
   "projects": {
     "title": "Mes Projets",
@@ -101,6 +113,74 @@
     "subjectPlaceholder": "De quoi s'agit-il ?",
     "messagePlaceholder": "Parlez-moi de votre projet ou dites simplement bonjour !",
     "thankYouMessage": "Merci pour votre message ! Je vous répondrai bientôt."
+  },
+  "passions": {
+    "title": "Mes Passions",
+    "subtitle": "Au-delà du code, découvrez les poursuites créatives et les expériences culturelles qui façonnent qui je suis.",
+    "tabs": {
+      "cooking": "Arts Culinaires",
+      "lionDance": "Danse du Lion",
+      "music": "Musique",
+      "philosophy": "Philosophie"
+    },
+    "cooking": {
+      "philosophy": {
+        "title": "Philosophie Culinaire",
+        "quote": "Cuisiner, c'est comme programmer - les deux nécessitent patience, précision et la capacité de mélanger différents éléments pour créer quelque chose de beau et fonctionnel.",
+        "description": "Mon approche de la cuisine reflète mon approche du développement. Chaque ingrédient a un but, chaque technique sert une fonction, et le résultat final devrait nourrir à la fois le corps et l'âme. Tout comme j'écris du code propre et maintenable, je crée des plats qui respectent la tradition tout en embrassant l'innovation."
+      },
+      "experience": {
+        "title": "Expérience Professionnelle",
+        "consultant": "Consultant Menu",
+        "chef": "Chef de Partie",
+        "education": "Formation Culinaire"
+      },
+      "gallery": {
+        "title": "Plats Signature"
+      }
+    },
+    "lionDance": {
+      "intro": {
+        "title": "Danse du Lion Traditionnelle",
+        "description": "La danse du lion est plus qu'une performance - c'est préservation culturelle, art athlétique et pratique spirituelle combinés. À travers des années d'entraînement et de performance, j'ai appris la discipline, le travail d'équipe et le respect culturel que cet art ancien exige."
+      },
+      "skills": "Compétences de Performance",
+      "performances": "Types de Performances",
+      "gallery": {
+        "title": "Galerie de Performances"
+      }
+    },
+    "music": {
+      "intro": {
+        "title": "Expression Musicale",
+        "description": "La musique a toujours été un pont entre mon héritage vietnamien et ma vie en France. À travers les instruments occidentaux et vietnamiens traditionnels, j'explore le langage universel qui connecte toutes les cultures."
+      }
+    },
+    "philosophy": {
+      "title": "Philosophie de Vie",
+      "life": {
+        "title": "Sur la Vie et la Croissance",
+        "quote": "Chaque compétence que j'apprends, chaque culture que j'embrasse, fait de moi un développeur et un être humain plus complet.",
+        "description": "Je crois que la diversité d'expérience mène à l'innovation. Mon parcours en cuisine m'enseigne la patience et la précision. La danse du lion me montre la puissance du travail d'équipe et du respect culturel. La musique me connecte aux émotions et à la créativité. Tout cela informe ma façon d'aborder la technologie et la résolution de problèmes."
+      },
+      "work": {
+        "title": "Sur la Technologie et l'Objectif",
+        "description": "La technologie devrait servir l'humanité, et non l'inverse. Tout comme je cuisine pour nourrir les gens et performe pour préserver la culture, je code pour créer des solutions qui améliorent la vie des gens. Chaque projet est une opportunité de mélanger excellence technique et empathie humaine."
+      },
+      "cultural": {
+        "title": "Construction de Ponts Culturels",
+        "description": "Vivant entre l'héritage vietnamien et la culture française, travaillant avec des équipes internationales, performant des arts traditionnels - toutes ces expériences m'enseignent que les meilleures solutions viennent de la compréhension et du respect de différentes perspectives. Dans le code, comme dans la vie, la diversité est une force."
+      }
+    }
+  },
+  "recipe": {
+    "prepTime": "Temps de Préparation",
+    "cookTime": "Temps de Cuisson",
+    "servings": "Portions",
+    "difficulty": "Difficulté",
+    "ingredients": "Ingrédients",
+    "instructions": "Instructions",
+    "philosophy": "Ma Philosophie"
   },
   "footer": {
     "description": "Étudiant en Master Informatique (M2), spécialisé en IA et Science des Données.",

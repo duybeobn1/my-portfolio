@@ -56,10 +56,10 @@ const LoadingPage = () => {
             >
               <Link
                 to="/home"
-                className="relative text-blue-700 font-extrabold uppercase transition group cursor-pointer"
+                className="relative link-artist font-extrabold uppercase transition group cursor-pointer"
               >
                 Visit Website
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-[var(--brand-500)] to-[var(--brand-600)] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </motion.div>
           </motion.div>
@@ -68,7 +68,7 @@ const LoadingPage = () => {
 
       {/* Bottom-left loading text */}
       {!finished && (
-        <div className="absolute bottom-4 left-4 text-blue-600 font-medium text-sm">
+        <div className="absolute bottom-4 left-4 text-[var(--brand-600)] font-medium text-sm">
           <div className="loader"></div> {}
         </div>
       )}

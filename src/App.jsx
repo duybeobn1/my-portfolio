@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ExperiencePage from "./pages/ExperiencePage";
+import PassionsPage from "./pages/PassionsPage";
 import ContactPage from "./pages/ContactPage";
 import "./App.css";
 function App() {
@@ -38,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="App bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-h-screen">
+    <div className="App bg-minimal min-h-screen text-default">
       <ScrollToTop />
       <InkTrailCursor />
       {showNavBar && <NavBar />}
@@ -97,6 +98,17 @@ function App() {
               transition={pageTransition}
             >
               <ExperiencePage />
+            </motion.div>
+          } />
+          <Route path="/passions" element={
+            <motion.div
+              variants={pageVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={pageTransition}
+            >
+              <PassionsPage />
             </motion.div>
           } />
           <Route path="/contact" element={

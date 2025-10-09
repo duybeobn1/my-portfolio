@@ -66,7 +66,7 @@ function ExperiencePage() {
   ];
 
   return (
-    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="min-h-screen pt-20 px-4 sm:px-6 lg:px-8 bg-minimal text-default">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -86,10 +86,10 @@ function ExperiencePage() {
             {experiences.map((exp, index) => (
               <div key={exp.id} className="relative">
                 {index < experiences.length - 1 && (
-                  <div className="absolute left-4 top-16 w-0.5 h-16 bg-gray-300"></div>
+                  <div className="absolute left-4 top-16 w-0.5 h-16 bg-[var(--line)]"></div>
                 )}
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
@@ -97,7 +97,7 @@ function ExperiencePage() {
                       <h3 className="text-xl font-semibold text-gray-900">
                         {exp.position}
                       </h3>
-                      <span className="text-sm text-blue-600 font-medium">
+                      <span className="text-sm text-gray-900 font-medium">
                         {exp.duration}
                       </span>
                     </div>
@@ -131,12 +131,12 @@ function ExperiencePage() {
           </h2>
           <div className="space-y-8 relative">
             {/* Timeline vertical line */}
-            <div className="absolute left-4 top-16 bottom-0 w-0.5 bg-gray-300"></div>
+            <div className="absolute left-4 top-16 bottom-0 w-0.5 bg-[var(--line)]"></div>
 
             {education.map((edu) => (
               <div key={edu.id} className="flex items-start space-x-4 relative">
                 {/* Timeline dot */}
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--blue)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 {/* Content */}
@@ -145,7 +145,7 @@ function ExperiencePage() {
                     <h3 className="text-xl font-semibold text-gray-900">
                       {edu.degree}
                     </h3>
-                    <span className="text-sm text-blue-600 font-medium">
+                    <span className="text-sm text-gray-900 font-medium">
                       {edu.duration}
                     </span>
                   </div>
@@ -162,16 +162,16 @@ function ExperiencePage() {
         </div>
 
         {/* Autres expériences */}
-        <section className="py-24 px-6 bg-white">
+        <section className="py-24 px-6 bg-minimal">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-semibold text-gray-900 mb-8">
               {t('experience.otherExperiences')}
             </h2>
             <div className="space-y-8 relative">
               {/* Timeline vertical line */}
-              <div className="absolute left-4 top-16 bottom-0 w-0.5 bg-gray-300"></div>
+              <div className="absolute left-4 top-16 bottom-0 w-0.5 bg-[var(--line)]"></div>
               <div className="flex items-start space-x-4 relative">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--pink)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md flex-1">
@@ -185,14 +185,14 @@ function ExperiencePage() {
               </div>
               {/* Consultant culinaire */}
               <div className="flex items-start space-x-4 relative">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md flex-1">
                   <h3 className="text-xl font-semibold text-gray-900">
                     Consultant culinaire
                   </h3>
-                  <span className="text-sm text-blue-600 font-medium">
+                  <span className="text-sm text-gray-900 font-medium">
                     2023 – Now
                   </span>
                   <p className="text-gray-600 mt-2 leading-relaxed">
@@ -203,14 +203,14 @@ function ExperiencePage() {
               </div>
 
               <div className="flex items-start space-x-4 relative">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--green)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md flex-1">
                   <h3 className="text-xl font-semibold text-gray-900">
                     Commis de cuisine at Bentomania
                   </h3>
-                  <span className="text-sm text-blue-600 font-medium">
+                  <span className="text-sm text-gray-900 font-medium">
                     2021 – 2022
                   </span>
                   <p className="text-gray-600 mt-2 leading-relaxed">
@@ -220,14 +220,14 @@ function ExperiencePage() {
               </div>
               {/* Commis de cuisine */}
               <div className="flex items-start space-x-4 relative">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--blue)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md flex-1">
                   <h3 className="text-xl font-semibold text-gray-900">
                     Commis de cuisine at Chez Banoi
                   </h3>
-                  <span className="text-sm text-blue-600 font-medium">
+                  <span className="text-sm text-gray-900 font-medium">
                     2024 – 2025
                   </span>
                   <p className="text-gray-600 mt-2 leading-relaxed">
@@ -237,14 +237,14 @@ function ExperiencePage() {
               </div>
 
               <div className="flex items-start space-x-4 relative">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                <div className="w-8 h-8 bg-[var(--pink)] rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md flex-1">
                   <h3 className="text-xl font-semibold text-gray-900">
                     Le Grand Refectoire
                   </h3>
-                  <span className="text-sm text-blue-600 font-medium">
+                  <span className="text-sm text-gray-900 font-medium">
                     2025
                   </span>
                   <p className="text-gray-600 mt-2 leading-relaxed">
