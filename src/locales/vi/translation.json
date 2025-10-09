@@ -4,6 +4,7 @@
     "about": "Giới thiệu",
     "projects": "Dự án",
     "experience": "Kinh nghiệm",
+    "passions": "Niềm đam mê",
     "contact": "Liên hệ"
   },
   "home": {
@@ -21,6 +22,7 @@
     "ctaDescription": "Sẵn sàng thảo luận về dự án tiếp theo của bạn? Tôi luôn hào hứng hợp tác trên các giải pháp sáng tạo.",
     "startConversation": "Bắt đầu Cuộc trò chuyện",
     "learnMore": "Tìm hiểu Thêm về Tôi",
+    "explorePassions": "Khám Phá Niềm Đam Mê",
     "downloadCV": "Tải CV của Tôi",
     "projects": {
       "aiVisionTransformer": {
@@ -51,7 +53,17 @@
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Công cụ",
-    "aiData": "AI/Dữ liệu"
+    "aiData": "AI/Dữ liệu",
+    "beyondCode": "Ngoài Lập Trình",
+    "personalInterests": "Nhưng tôi còn nhiều hơn chỉ là lập trình! Tôi cũng là chuyên gia tư vấn đầu bếp chuyên nghiệp, nghệ sĩ múa lân, và người say mê âm nhạc. Những trải nghiệm đa dạng này hình thành cách tiếp cận sáng tạo của tôi trong việc giải quyết vấn đề và mang lại góc nhìn độc đáo cho công việc kỹ thuật của tôi.",
+    "discoverMore": "Khám Phá Niềm Đam Mê Của Tôi",
+    "personalHighlights": "Những Điều Khác Biệt",
+    "culinaryArtist": "Nghệ Sĩ Ẩm Thực",
+    "culinaryDescription": "Chuyên gia tư vấn đầu bếp chuyên nghiệp cho nhà hàng Michelin Guide, kết hợp truyền thống Việt Nam với kỹ thuật Pháp.",
+    "culturalPerformer": "Nghệ Sĩ Văn Hóa",
+    "lionDanceDescription": "Nghệ sĩ múa lân chuyên nghiệp, bảo tồn và chia sẻ nghệ thuật văn hóa Trung Hoa truyền thống.",
+    "musicEnthusiast": "Người Say Mê Âm Nhạc",
+    "musicDescription": "Piano và nhạc cụ truyền thống Việt Nam, xây dựng cầu nối văn hóa qua biểu hiện âm nhạc."
   },
   "projects": {
     "title": "Dự án của Tôi",
@@ -101,6 +113,76 @@
     "subjectPlaceholder": "Nói về điều gì?",
     "messagePlaceholder": "Hãy kể cho tôi về dự án của bạn hoặc chỉ đơn giản chào hỏi!",
     "thankYouMessage": "Cảm ơn tin nhắn của bạn! Tôi sẽ phản hồi sớm."
+  },
+  "passions": {
+    "title": "Niềm Đam Mê Của Tôi",
+    "subtitle": "Ngoài việc lập trình, khám phá những đam mê sáng tạo và trải nghiệm văn hóa hình thành nên con người tôi.",
+    "tabs": {
+      "cooking": "Nghệ Thuật Ẩm Thực",
+      "lionDance": "Múa Lân",
+      "music": "Âm Nhạc",
+      "philosophy": "Triết Lý"
+    },
+    "cooking": {
+      "philosophy": {
+        "title": "Triết Lý Ẩm Thực",
+        "quote": "Nấu ăn giống như lập trình - cả hai đều cần sự kiên nhẫn, chính xác và khả năng kết hợp các yếu tố khác nhau để tạo ra điều gì đó đẹp và hữu dụng.",
+        "description": "Cách tiếp cận nấu ăn của tôi phản ánh cách tiếp cận phát triển của tôi. Mỗi nguyên liệu đều có mục đích, mỗi kỹ thuật đều phục vụ cho một chức năng, và kết quả cuối cùng nên nuôi dưỡng cả cơ thể lẫn tâm hồn. Giống như tôi viết code sạch, dễ bảo trì, tôi tạo ra những món ăn tôn trọng truyền thống nhưng vẫn đón nhận sự đổi mới."
+      },
+      "experience": {
+        "title": "Kinh Nghiệm Chuyên Nghiệp",
+        "consultant": "Tư Vấn Thực Đơn",
+        "chef": "Bếp Trưởng",
+        "education": "Giáo Dục Ẩm Thực"
+      },
+      "gallery": {
+        "title": "Món Ăn Đặc Trưng"
+      }
+    },
+    "lionDance": {
+      "intro": {
+        "title": "Múa Lân Truyền Thống",
+        "description": "Múa lân không chỉ là biểu diễn - đó là sự kết hợp giữa bảo tồn văn hóa, nghệ thuật thể thao và thực hành tâm linh. Qua nhiều năm luyện tập và biểu diễn, tôi đã học được kỷ luật, tinh thần đồng đội và sự tôn trọng văn hóa mà nghệ thuật cổ xưa này đòi hỏi.",
+        "definition": "Múa lân là một hình thức biểu diễn truyền thống trong cộng đồng người Hoa và nhiều cộng đồng Đông Nam Á. Hai người điều khiển đầu và đuôi lân với những động tác biểu cảm, bước chân nhịp nhàng và các cú nhảy nhào lộn theo nhịp trống, chập chõa và chiêng. Điệu múa tượng trưng cho may mắn, thường xuất hiện trong lễ hội, nghi lễ và khai trương.",
+        "personal": "Múa lân rèn cho tôi tính kỷ luật và sự chăm chỉ. Sự lặp lại, rèn luyện thể lực và dũng khí đứng dậy sau mỗi lần ngã giúp tôi bền bỉ và tập trung hơn — trong biểu diễn cũng như trong cuộc sống."
+      },
+      "skills": "Kỹ Năng Biểu Diễn",
+      "performances": "Loại Biểu Diễn",
+      "gallery": {
+        "title": "Bộ Sưu Tập Biểu Diễn"
+      }
+    },
+    "music": {
+      "intro": {
+        "title": "Biểu Hiện Âm Nhạc",
+        "description": "Âm nhạc luôn là cầu nối giữa di sản Việt Nam và cuộc sống tại Pháp của tôi. Thông qua cả nhạc cụ phương Tây và nhạc cụ truyền thống Việt Nam, tôi khám phá ngôn ngữ chung kết nối tất cả các nền văn hóa."
+      }
+    },
+    "philosophy": {
+      "title": "Triết Lý Sống",
+      "life": {
+        "title": "Về Cuộc Sống và Phát Triển",
+        "quote": "Mỗi kỹ năng tôi học, mỗi nền văn hóa tôi tiếp nhận, đều giúp tôi trở thành một lập trình viên và con người hoàn thiện hơn.",
+        "description": "Tôi tin rằng sự đa dạng của trải nghiệm dẫn đến sự đổi mới. Kiền thức nấu ăn dạy tôi sự kiên nhẫn và chính xác. Múa lân cho tôi thấy sức mạnh của làm việc nhóm và tôn trọng văn hóa. Âm nhạc kết nối tôi với cảm xúc và sáng tạo. Tất cả những điều này đều ảnh hưởng đến cách tôi tiếp cận công nghệ và giải quyết vấn đề."
+      },
+      "work": {
+        "title": "Về Công Nghệ và Mục Tiêu",
+        "description": "Công nghệ nên phục vụ nhân loại, chứ không ngược lại. Giống như tôi nấu ăn để nuôi dưỡng con người và biểu diễn để bảo tồn văn hóa, tôi lập trình để tạo ra những giải pháp làm cho cuộc sống của con người tốt đẹp hơn. Mỗi dự án là một cơ hội để kết hợp sự xuất sắc kỹ thuật với lòng cảm thông con người."
+      },
+      "cultural": {
+        "title": "Xây Dựng Cầu Nối Văn Hóa",
+        "description": "Sống giữa di sản Việt Nam và văn hóa Pháp, làm việc với các đội quốc tế, biểu diễn các nghệ thuật truyền thống - tất cả những trải nghiệm này dạy tôi rằng những giải pháp tốt nhất đến từ việc hiểu và tôn trọng những quan điểm khác nhau. Trong code cũng như trong cuộc sống, sự đa dạng là sức mạnh."
+      }
+    }
+  },
+  "recipe": {
+    "prepTime": "Thời Gian Chuẩn Bị",
+    "cookTime": "Thời Gian Nấu",
+    "servings": "Khẩu Phần",
+    "difficulty": "Mức Độ Khó",
+    "ingredients": "Nguyên Liệu",
+    "instructions": "Hướng Dẫn",
+    "philosophy": "Triết Lý Của Tôi"
   },
   "footer": {
     "description": "Sinh viên Thạc sĩ ngành Khoa học Máy tính (M2), chuyên về AI và Khoa học Dữ liệu.",
