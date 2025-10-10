@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "name": "my-portfolio",
+  "homepage": "https://duybeobn1.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
