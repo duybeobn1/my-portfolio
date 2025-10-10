@@ -28,23 +28,18 @@ jobs:
           cache: "npm"
 
       - name: Install deps
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Build
         run: npm run build
 
-      # SPA routing fallback so deep links work on GitHub Pages
-      - name: Add 404 fallback
-        run: |
-          if [ -d "build" ]; then cp build/index.html build/404.html; fi
-          if [ -d "dist" ]; then cp dist/index.html dist/404.html || true; fi
+      - name: Add 404 fallback (SPA routing)
+        run: cp dist/index.html dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: |
-            build
-            dist
+          path: dist
 
   deploy:
     needs: build
