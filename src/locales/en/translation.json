@@ -25,21 +25,21 @@
     "explorePassions": "Explore My Passions",
     "downloadCV": "Download My CV",
     "projects": {
-      "aiVisionTransformer": {
-        "title": "AI Vision Transformer",
-        "description": "Advanced image restoration using Vision Transformers and deep learning"
+      "visionTransformer": {
+        "title": "Mini Vision Transformer",
+        "description": "Exploring Vision Transformers for image restoration from shuffled patches"
       },
-      "co2Tracker": {
-        "title": "CO₂ Impact Tracker",
-        "description": "Full-stack application for carbon footprint comparison and analysis"
+      "cookingAssistant": {
+        "title": "Smart Cooking Assistant",
+        "description": "Ingredient tracking and recipe management with OCR scanning"
       },
-      "cryptoBot": {
-        "title": "Crypto Trading Bot",
-        "description": "Intelligent trading system with technical analysis strategies"
+      "foodMining": {
+        "title": "Food Mining Platform",
+        "description": "Analyzing 250K+ recipes to reveal culinary cultures and trends"
       },
-      "culinaryAssistant": {
-        "title": "Smart Culinary Assistant",
-        "description": "AI-powered cooking helper with OCR and object detection"
+      "reinforcementLearning": {
+        "title": "Multi-Agent Reinforcement Learning",
+        "description": "Intelligent agents with DQN, Q-learning, and MDP in simulated environments"
       }
     }
   },
@@ -85,7 +85,13 @@
       "airmiumSystem": "Analyzed data workflows and user requirements, Designed and implemented a secure, scalable system for data historization and quality control, Developed web interfaces for accessing and visualizing real-time air treatment data, Proposed solutions for backup strategies and mobile/web accessibility.",
       "edgeDetectionProject": "This project implements advanced edge detection techniques using differential operators (Prewitt, Sobel, Kirsch) combined with thresholding and refinement processes to highlight contours in images.",
       "visionTransformer": "This project explores the capabilities of Vision Transformers (ViTs) by segmenting images into fixed-size patches and attempting to reconstruct the original image using attention-based mechanisms. By experimenting with small patch permutations (e.g., 4×4), the model evaluates whether global context can be preserved and restored from shuffled or occluded image segments. The goal is to investigate the effectiveness of transformer attention in recovering image structure, paving the way for applications in image inpainting, resizing, or restoration.",
-      "cookingAssistant": "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly."
+      "cookingAssistant": "This web application is designed to help users manage their cooking more efficiently by combining intelligent ingredient tracking with personalized recipe management. Users can store ingredients with expiration dates, create and plan meals, and receive recipe suggestions based on what they have at home. It also supports OCR-based scanning of food labels or handwritten notes, helping digitize and organize cooking data seamlessly.",
+      "foodMining": "A comprehensive food data analysis platform designed to identify and characterize culinary cultures from over 250,000 recipes from Food.com. Developed data mining modules for extraction, structuring, and large-scale visualization of food data. Implemented classification and clustering algorithms to reveal cultural trends, nutritional habits, and correlations between ingredients, dishes, and regions. Future development includes integration of nutritional aspects related to traditional Asian medicine.",
+      "biomedicalRNN": "A biomedical text classifier based on Recurrent Neural Networks (RNN) using PyTorch. Designed and trained natural language processing models to extract and categorize textual information from specialized biomedical corpora. Implemented complete pipelines for preprocessing, vectorization, and evaluation on real-world datasets. Achieved high accuracy on scientific abstract classification and automatic identification of medical themes, demonstrating model robustness in real-world contexts.",
+      "fashionNumbers": "Development of an image classification model using neural networks for automatic identification of fashion items and digits from standard datasets (Fashion MNIST, MNIST). Designed preprocessing and data augmentation pipelines to improve model robustness. Evaluated on real test sets with excellent accuracy rates, demonstrating the model's effectiveness for visual recognition in varied contexts.",
+      "graphML": "Graph Machine Learning project focusing on link prediction using Graph Autoencoders (GAE) and Variational Graph Autoencoders (VGAE) with rigorous evaluation and reproducible experimentation. Implemented GAE/VGAE encoders and inner-product decoders for node embeddings and edge likelihoods, optimized training with careful split design and metric tracking (AUC, AP). Built strong classical baselines with Jaccard and Preferential Attachment using NetworkX. Designed ablation studies including Linear-VGAE, feature subsets, and featureless identity inputs to isolate topology vs attributes. Benchmarked models across multiple train/val/test ratios to assess robustness and data-efficiency of deterministic vs variational encoders.",
+      "argumentationDynamics": "Development of a complete framework for Assumption-Based Argumentation with preference extensions (ABA+). Integration of a fine-tuned DeBERTa-v2 model for automatic attack detection. Implementation of a flexible parser, normalization algorithms (cycle elimination, flattening, atomization), and generation of minimal arguments via forward chaining. Computation of attacks according to formal ABA+ semantics, distinguishing normal attacks and reversed attacks by preference. Multi-format web interface with structured tables and interactive PyVis graphs.",
+      "reinforcementLearning": "Development of a series of advanced projects around intelligent agents and reinforcement learning using Python and Jupyter Notebook. Implementation of search algorithms, Deep Q-Networks (DQN), and policy evaluation strategies in simulated environments (Pacman, direct search). Utilization of Markov Decision Processes (MDP), value iteration, and Q-learning for solving complex sequential decision-making tasks. Experimental analysis and performance optimization of agents for multi-agent systems and machine learning scenarios."
     }
   },
   "experience": {

@@ -152,20 +152,20 @@ const HomePage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                titleKey: "aiVisionTransformer",
-                tech: ["Transformer", "PyTorch", "Computer Vision"],
+                titleKey: "visionTransformer",
+                tech: ["PyTorch", "Vision Transformers", "Image Processing"],
               },
               {
-                titleKey: "co2Tracker",
-                tech: ["React", "Spring Boot", "PostgreSQL"],
+                titleKey: "cookingAssistant",
+                tech: ["React", "Spring Boot", "OCR", "PostgreSQL"],
               },
               {
-                titleKey: "cryptoBot",
-                tech: ["Python", "Machine Learning", "APIs"],
+                titleKey: "foodMining",
+                tech: ["Python", "Data Mining", "Machine Learning"],
               },
               {
-                titleKey: "culinaryAssistant",
-                tech: ["React", "YOLO", "OCR"],
+                titleKey: "reinforcementLearning",
+                tech: ["Python", "Deep Q-Networks", "Multi-Agent Systems"],
               },
             ].map((project, i) => (
               <motion.div

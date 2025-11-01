@@ -25,21 +25,21 @@
     "explorePassions": "Khám Phá Niềm Đam Mê",
     "downloadCV": "Tải CV của Tôi",
     "projects": {
-      "aiVisionTransformer": {
-        "title": "AI Vision Transformer",
-        "description": "Khôi phục hình ảnh tiên tiến sử dụng Vision Transformers và học sâu"
+      "visionTransformer": {
+        "title": "Mini Vision Transformer",
+        "description": "Khám phá Vision Transformers để khôi phục hình ảnh từ các miếng bị xáo trộn"
       },
-      "co2Tracker": {
-        "title": "Theo dõi Tác động CO₂",
-        "description": "Ứng dụng full-stack cho việc so sánh và phân tích dấu chân carbon"
-      },
-      "cryptoBot": {
-        "title": "Bot Giao dịch Crypto",
-        "description": "Hệ thống giao dịch thông minh với các chiến lược phân tích kỹ thuật"
-      },
-      "culinaryAssistant": {
+      "cookingAssistant": {
         "title": "Trợ lý Nấu ăn Thông minh",
-        "description": "Trợ lý nấu ăn được hỗ trợ bởi AI với OCR và nhận diện đối tượng"
+        "description": "Theo dõi nguyên liệu và quản lý công thức với quét OCR"
+      },
+      "foodMining": {
+        "title": "Nền tảng Food Mining",
+        "description": "Phân tích hơn 250.000 công thức để tiết lộ nền văn hóa ẩm thực và xu hướng"
+      },
+      "reinforcementLearning": {
+        "title": "Học Tăng cường Đa Tác nhân",
+        "description": "Tác nhân thông minh với DQN, Q-learning và MDP trong môi trường mô phỏng"
       }
     }
   },
@@ -85,7 +85,13 @@
       "airmiumSystem": "Phân tích quy trình dữ liệu và yêu cầu người dùng, Thiết kế và triển khai hệ thống an toàn, có thể mở rộng cho việc lưu trữ dữ liệu và kiểm soát chất lượng, Phát triển giao diện web để truy cập và trực quan hóa dữ liệu xử lý không khí theo thời gian thực, Đề xuất giải pháp cho chiến lược sao lưu và khả năng truy cập di động/web.",
       "edgeDetectionProject": "Dự án này triển khai các kỹ thuật phát hiện biên tiên tiến sử dụng các toán tử vi phân (Prewitt, Sobel, Kirsch) kết hợp với các quá trình ngưỡng và tinh chế để làm nổi bật đường viền trong hình ảnh.",
       "visionTransformer": "Dự án này khám phá khả năng của Vision Transformers (ViTs) bằng cách phân đoạn hình ảnh thành các miếng có kích thước cố định và cố gắng tái tạo hình ảnh gốc sử dụng các cơ chế chú ý. Bằng cách thử nghiệm với các hoán vị miếng nhỏ (ví dụ: 4×4), mô hình đánh giá liệu bối cảnh toàn cục có thể được bảo tồn và khôi phục từ các đoạn hình ảnh bị xáo trộn hoặc che khuất hay không. Mục tiêu là điều tra hiệu quả của sự chú ý của transformer trong việc khôi phục cấu trúc hình ảnh, mở đường cho các ứng dụng trong việc sửa chữa hình ảnh, thay đổi kích thước hoặc khôi phục.",
-      "cookingAssistant": "Ứng dụng web này được thiết kế để giúp người dùng quản lý việc nấu ăn hiệu quả hơn bằng cách kết hợp theo dõi nguyên liệu thông minh với quản lý công thức cá nhân hóa. Người dùng có thể lưu trữ nguyên liệu với ngày hết hạn, tạo và lên kế hoạch bữa ăn, và nhận gợi ý công thức dựa trên những gì họ có ở nhà. Nó cũng hỗ trợ quét dựa trên OCR các nhãn thực phẩm hoặc ghi chú viết tay, giúp số hóa và tổ chức dữ liệu nấu ăn một cách liền mạch."
+      "cookingAssistant": "Ứng dụng web này được thiết kế để giúp người dùng quản lý việc nấu ăn hiệu quả hơn bằng cách kết hợp theo dõi nguyên liệu thông minh với quản lý công thức cá nhân hóa. Người dùng có thể lưu trữ nguyên liệu với ngày hết hạn, tạo và lên kế hoạch bữa ăn, và nhận gợi ý công thức dựa trên những gì họ có ở nhà. Nó cũng hỗ trợ quét dựa trên OCR các nhãn thực phẩm hoặc ghi chú viết tay, giúp số hóa và tổ chức dữ liệu nấu ăn một cách liền mạch.",
+      "foodMining": "Một nền tảng phân tích dữ liệu thực phẩm toàn diện được thiết kế để xác định và đặc trưng hóa các nền văn hóa ẩm thực từ hơn 250.000 công thức từ Food.com. Phát triển các mô-đun khai thác dữ liệu để trích xuất, cấu trúc hóa và trực quan hóa dữ liệu thực phẩm quy mô lớn. Triển khai các thuật toán phân loại và phân cụm để tiết lộ xu hướng văn hóa, thói quen dinh dưỡng và mối tương quan giữa nguyên liệu, món ăn và khu vực. Phát triển trong tương lai bao gồm tích hợp các khía cạnh dinh dưỡng liên quan đến y học cổ truyền châu Á.",
+      "biomedicalRNN": "Một bộ phân loại văn bản y sinh dựa trên Mạng Nơ-ron Hồi tiếp (RNN) sử dụng PyTorch. Thiết kế và huấn luyện các mô hình xử lý ngôn ngữ tự nhiên để trích xuất và phân loại thông tin văn bản từ các kho dữ liệu y sinh chuyên môn. Triển khai các pipeline hoàn chỉnh cho tiền xử lý, vector hóa và đánh giá trên các tập dữ liệu thực tế. Đạt được độ chính xác cao trong phân loại tóm tắt khoa học và xác định tự động các chủ đề y tế, chứng minh độ bền vững của mô hình trong bối cảnh thực tế.",
+      "fashionNumbers": "Phát triển mô hình phân loại hình ảnh sử dụng mạng nơ-ron để nhận dạng tự động các món đồ thời trang và chữ số từ các tập dữ liệu tiêu chuẩn (Fashion MNIST, MNIST). Thiết kế các pipeline tiền xử lý và tăng cường dữ liệu để cải thiện độ bền vững của mô hình. Đánh giá trên các tập kiểm tra thực tế với tỷ lệ chính xác xuất sắc, chứng minh hiệu quả của mô hình cho nhận dạng thị giác trong các bối cảnh khác nhau.",
+      "graphML": "Dự án Machine Learning trên đồ thị tập trung vào dự đoán liên kết sử dụng Graph Autoencoders (GAE) và Variational Graph Autoencoders (VGAE) với đánh giá nghiêm ngặt và thử nghiệm có thể tái tạo. Triển khai các bộ mã hóa GAE/VGAE và bộ giải mã tích trong cho các embedding nút và khả năng cạnh, tối ưu hóa huấn luyện với thiết kế phân chia cẩn thận và theo dõi số liệu (AUC, AP). Xây dựng các đường cơ sở cổ điển mạnh mẽ với Jaccard và Preferential Attachment sử dụng NetworkX. Thiết kế các nghiên cứu ablation bao gồm Linear-VGAE, tập con đặc trưng và đầu vào nhận dạng không có đặc trưng để cô lập topo so với thuộc tính. Đánh giá mô hình trên nhiều tỷ lệ train/val/test để đánh giá độ bền vững và hiệu quả dữ liệu của các bộ mã hóa xác định so với biến phân.",
+      "argumentationDynamics": "Phát triển một framework hoàn chỉnh cho Lập luận Dựa trên Giả định với các mở rộng ưu tiên (ABA+). Tích hợp mô hình DeBERTa-v2 được tinh chỉnh để phát hiện tự động các cuộc tấn công. Triển khai trình phân tích cú pháp linh hoạt, các thuật toán chuẩn hóa (loại bỏ chu trình, làm phẳng, nguyên tử hóa) và tạo các đối số tối thiểu thông qua chuỗi chuyển tiếp. Tính toán các cuộc tấn công theo ngữ nghĩa chính thức ABA+ phân biệt các cuộc tấn công bình thường và các cuộc tấn công đảo ngược theo ưu tiên. Giao diện web đa định dạng với bảng có cấu trúc và đồ thị tương tác PyVis.",
+      "reinforcementLearning": "Phát triển một loạt các dự án tiên tiến về các tác nhân thông minh và học tăng cường sử dụng Python và Jupyter Notebook. Triển khai các thuật toán tìm kiếm, Deep Q-Networks (DQN), và các chiến lược đánh giá chính sách trong môi trường mô phỏng (Pacman, tìm kiếm trực tiếp). Sử dụng Quá trình Quyết định Markov (MDP), value iteration và Q-learning để giải quyết các nhiệm vụ ra quyết định tuần tự phức tạp. Phân tích thực nghiệm và tối ưu hóa hiệu suất của các tác nhân cho các hệ thống đa tác nhân và các kịch bản học máy."
     }
   },
   "experience": {
